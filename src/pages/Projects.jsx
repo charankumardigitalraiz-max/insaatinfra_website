@@ -13,7 +13,7 @@ const Projects = () => {
             title: 'Insaat Meadows',
             location: 'Sangareddy (Bachepally Village)',
             type: 'Open Plots',
-            image: 'https://images.unsplash.com/photo-1500382017468-9049fee74a62?auto=format&fit=crop&q=80&w=500',
+            image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=500',
             status: 'Ready to Construct',
             price: '₹25L - ₹45L',
             area: '150 - 300 sq yds'

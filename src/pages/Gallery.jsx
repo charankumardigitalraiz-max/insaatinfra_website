@@ -18,14 +18,14 @@ const Gallery = () => {
             id: 2,
             category: 'plots',
             title: 'Insaat Meadows - Layout',
-            image: 'https://images.unsplash.com/photo-1500382017468-9049fee74a62?auto=format&fit=crop&q=80&w=1000',
+            image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=1000',
             desc: 'Spacious open plots at Bachepally Village.'
         },
         {
             id: 3,
             category: 'construction',
             title: 'Construction in Progress',
-            image: 'https://images.unsplash.com/photo-1503387762-592dea58ef23?auto=format&fit=crop&q=80&w=1000',
+            image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=80&w=1000',
             desc: 'Site completion and quality checks.'
         },
         {
@@ -39,7 +39,7 @@ const Gallery = () => {
             id: 5,
             category: 'apartments',
             title: 'Insaat Bliss - Night View',
-            image: 'https://images.unsplash.com/photo-1512918766671-ed6a07be0618?auto=format&fit=crop&q=80&w=1000',
+            image: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&q=80&w=1000',
             desc: 'Elegant lighting and landscape architecture.'
         },
         {

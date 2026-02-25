@@ -51,10 +51,10 @@ const Navbar = () => {
                             <div className="nav-logo-icon">
                                 <img src='/logo.png' alt="Insaat Infra Logo" />
                             </div>
-                            <div className="nav-logo-text">
+                            {/* <div className="nav-logo-text">
                                 <span className="nav-logo-name">Insaat Infra</span>
                                 <span className="nav-logo-sub">Projects Pvt Ltd</span>
-                            </div>
+                            </div> */}
                         </Link>
 
                         {/* Desktop Navigation */}

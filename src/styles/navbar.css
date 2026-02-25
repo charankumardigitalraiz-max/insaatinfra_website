@@ -6,6 +6,7 @@
     --nav-height: 80px;
     --nav-glass-bg: rgba(255, 255, 255, 0.05);
     --nav-glass-scrolled: rgba(255, 255, 255, 0.85);
+    /* --nav-glass-scrolled: rgba(255, 255, 255, 0.85); */
     --nav-border: rgba(255, 255, 255, 0.1);
     --nav-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     --nav-blur: 15px;
@@ -32,7 +33,7 @@
 }
 
 .nav-content {
-    background: var(--nav-glass-bg);
+    background: var(--nav-glass-scrolled);
     backdrop-filter: blur(var(--nav-blur));
     -webkit-backdrop-filter: blur(var(--nav-blur));
     border: 1px solid var(--nav-border);
@@ -75,8 +76,8 @@
 }
 
 .nav-logo-icon {
-    width: 42px;
-    height: 42px;
+    width: 80px;
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -135,13 +136,14 @@
 .nav-item {
     font-size: 0.85rem;
     font-weight: 700;
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--text-dark);
     text-decoration: none;
     padding: 10px 18px;
     border-radius: 30px;
     transition: all 0.3s ease;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+
 }
 
 .nav-item:hover {
@@ -151,7 +153,7 @@
 
 .nav-item.active {
     background: white;
-    color: var(--sapphire-dark);
+    color: var(--sapphire);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
