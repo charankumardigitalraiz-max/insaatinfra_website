@@ -31,9 +31,9 @@ const Contact = () => {
         {
             icon: <Phone size={32} />,
             title: 'Call Us',
-            content: '+91 91544 91915',
+            content: '+91 9322 22 2821',
             subtext: 'Mon - Sat: 9AM - 7PM',
-            link: 'tel:+919154491915',
+            link: 'tel:+919322222821',
             color: 'sapphire'
         },
         {
@@ -46,10 +46,10 @@ const Contact = () => {
         },
         {
             icon: <MapPin size={32} />,
-            title: 'Visit Us',
-            content: 'Plot No. 35, Shaikpet',
-            subtext: 'Hyderabad, Telangana - 500008',
-            link: 'https://goo.gl/maps/shaikpet-hyderabad',
+            title: 'Head Office',
+            content: 'Opp Hotel Wood Bridge',
+            subtext: 'Lakdikapul, Hyderabad - 500004',
+            link: 'https://goo.gl/maps/lakdikapul-hyderabad',
             color: 'ruby'
         }
     ];
@@ -91,20 +91,20 @@ const Contact = () => {
                     <div className="container">
                         <div className="hero-stats-inner">
                             <div className="hero-stat-item" data-aos="fade-up" data-aos-delay="0">
-                                <div className="hero-stat-number">24/7</div>
-                                <div className="hero-stat-label">Support Available</div>
+                                <div className="hero-stat-number">2018</div>
+                                <div className="hero-stat-label">Established</div>
                             </div>
                             <div className="hero-stat-item" data-aos="fade-up" data-aos-delay="100">
                                 <div className="hero-stat-number">500+</div>
                                 <div className="hero-stat-label">Happy Families</div>
                             </div>
                             <div className="hero-stat-item" data-aos="fade-up" data-aos-delay="200">
-                                <div className="hero-stat-number">15+</div>
-                                <div className="hero-stat-label">Years Experience</div>
+                                <div className="hero-stat-number">120+</div>
+                                <div className="hero-stat-label">Acres Developed</div>
                             </div>
                             <div className="hero-stat-item" data-aos="fade-up" data-aos-delay="300">
-                                <div className="hero-stat-number">98%</div>
-                                <div className="hero-stat-label">Client Satisfaction</div>
+                                <div className="hero-stat-number">6+</div>
+                                <div className="hero-stat-label">Years Experience</div>
                             </div>
                         </div>
                     </div>

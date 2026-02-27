@@ -19,10 +19,11 @@ const Footer = () => {
     ];
 
     const services = [
-        'Residential Projects',
-        'Commercial Spaces',
-        'Investment Opportunities',
-        'Property Management',
+        'Premium Apartments',
+        'Gated Community Layouts',
+        'Luxury Villas',
+        'Commercial Complexes',
+        'Interior Designing',
     ];
 
     const handleSubscribe = (e) => {
@@ -43,13 +44,7 @@ const Footer = () => {
                         {/* Brand Section */}
                         <div className="footer-brand">
                             <div className="footer-logo">
-                                <div className="footer-logo-icon">
-                                    <span>II</span>
-                                </div>
-                                <div className="footer-logo-text">
-                                    <span className="footer-logo-name">Insaat Infra</span>
-                                    <span className="footer-logo-sub">Projects Pvt Ltd</span>
-                                </div>
+                                <img src="/logo.png" alt="Insaat Infra Logo" className="logo-image" />
                             </div>
                             <p className="footer-desc">
                                 Top Real Estate Developer in Sangareddy. Crafting exceptional living spaces with uncompromising quality,
@@ -109,8 +104,17 @@ const Footer = () => {
                                         <MapPin size={16} />
                                     </div>
                                     <div className="footer-contact-info">
-                                        <span>Address</span>
-                                        <p>Plot No. 35, Shaikpet, Hyderabad, Telangana, India - 500008</p>
+                                        <span>Head Office</span>
+                                        <p>11-12/2/A/21, Opp Hotel Wood Bridge, Near RR District Collectorate, Lakdikapul, Hyderabad - 500004.</p>
+                                    </div>
+                                </div>
+                                <div className="footer-contact-item">
+                                    <div className="footer-contact-icon">
+                                        <MapPin size={16} />
+                                    </div>
+                                    <div className="footer-contact-info">
+                                        <span>Regional Office</span>
+                                        <p>3-4-8/1, Near New Bus Stand, Sangareddy, Telangana - 502001.</p>
                                     </div>
                                 </div>
                                 <div className="footer-contact-item">
@@ -119,7 +123,8 @@ const Footer = () => {
                                     </div>
                                     <div className="footer-contact-info">
                                         <span>Phone</span>
-                                        <a href="tel:+919154491915">+91 91544 91915</a>
+                                        <a href="tel:+919322222821">+91 9322 22 2821</a>
+                                        <a href="tel:+919702318142">+91 97023 18142</a>
                                     </div>
                                 </div>
                                 <div className="footer-contact-item">

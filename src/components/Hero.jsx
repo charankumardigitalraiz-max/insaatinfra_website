@@ -32,37 +32,13 @@ const Hero = () => {
                         </div>
 
                         <h1 className="hero-title">
-                            <span className="wave-text">E</span>
-                            <span className="wave-text">l</span>
-                            <span className="wave-text">e</span>
-                            <span className="wave-text">v</span>
-                            <span className="wave-text">a</span>
-                            <span className="wave-text">t</span>
-                            <span className="wave-text">i</span>
-                            <span className="wave-text">n</span>
-                            <span className="wave-text">g</span>
-                            {' '}
-                            <span className="highlight">Urban Living</span><br />
-                            <span className="wave-text">W</span>
-                            <span className="wave-text">i</span>
-                            <span className="wave-text">t</span>
-                            <span className="wave-text">h</span>
-                            {' '}
-                            <span className="wave-text">E</span>
-                            <span className="wave-text">x</span>
-                            <span className="wave-text">c</span>
-                            <span className="wave-text">e</span>
-                            <span className="wave-text">l</span>
-                            <span className="wave-text">l</span>
-                            <span className="wave-text">e</span>
-                            <span className="wave-text">n</span>
-                            <span className="wave-text">c</span>
-                            <span className="wave-text">e</span>
+                            Transforming<br />
+                            <span className="highlight">Visions into Reality</span>
                         </h1>
 
                         <p className="hero-subtitle">
-                            Discover premium apartments, luxury villas and open plots in Sangareddy
-                            designed for a lifestyle of comfort, luxury and nature.
+                            Established in 2018, INSAAT INFRA PROJECTS PVT. LTD. is a leading construction
+                            company specializing in premium apartments, luxury villas, and open plots.
                         </p>
 
                         <div className="hero-actions">
@@ -90,8 +66,8 @@ const Hero = () => {
                 <div className="container">
                     <div className="hero-stats-inner">
                         <div className="hero-stat-item" data-aos="fade-up" data-aos-delay="0">
-                            <div className="hero-stat-number">15+</div>
-                            <div className="hero-stat-label">Projects Delivered</div>
+                            <div className="hero-stat-number">2018</div>
+                            <div className="hero-stat-label">Established Year</div>
                         </div>
                         <div className="hero-stat-item" data-aos="fade-up" data-aos-delay="100">
                             <div className="hero-stat-number">500+</div>
@@ -102,7 +78,7 @@ const Hero = () => {
                             <div className="hero-stat-label">Acres Developed</div>
                         </div>
                         <div className="hero-stat-item" data-aos="fade-up" data-aos-delay="300">
-                            <div className="hero-stat-number">15+</div>
+                            <div className="hero-stat-number">6+</div>
                             <div className="hero-stat-label">Years of Excellence</div>
                         </div>
                     </div>

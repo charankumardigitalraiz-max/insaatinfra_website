@@ -11,26 +11,27 @@ import '../styles/home.css';
 
 const featuredProjects = [
     {
-        id: 'insaat-meadows',
-        title: "Insaat Meadows",
-        location: "Sangareddy, Telangana",
-        type: "Open Plots",
-        image: "https://images.unsplash.com/photo-1500382017468-9049fee74a62?auto=format&fit=crop&q=80&w=1000",
-        status: "Ready to Construct",
+        id: 'insaat-capetown',
+        title: "Insaat Capetown",
+        location: "Kandi, Sangareddy",
+        type: "Premium Apartments",
+        image: "/images/apartments/capetown.png",
+        status: "Upcoming",
     },
     {
-        id: 'insaat-bliss',
-        title: "Insaat Bliss",
-        location: "Sangareddy, Telangana",
-        type: "Luxury Apartments",
-        image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80&w=1000",
-        status: "Ongoing",
+        id: 'insaat-habitat',
+        title: "Insaat Habitat",
+        location: "Malkapur, Sangareddy",
+        type: "Gated Community",
+        image: "/images/layouts/habitat.png",
+        status: "Completed",
     },
     {
-        title: "Insaat Glow",
-        location: "Sangareddy, Telangana",
-        type: "Premium Villas",
-        image: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&q=80&w=1000",
+        id: 'insaat-skyview',
+        title: "Insaat Sky View",
+        location: "Kandi, Sangareddy",
+        type: "Luxury Residences",
+        image: "/images/apartments/skyview.jpg",
         status: "Upcoming",
     },
 ];
@@ -96,7 +97,7 @@ const Home = () => {
                                 />
                             </div>
                             <div className="about-badge">
-                                <div className="about-badge-num">15+</div>
+                                <div className="about-badge-num">6+</div>
                                 <div className="about-badge-label">Years of Excellence</div>
                             </div>
                             <div className="about-badge-2">
@@ -142,7 +143,7 @@ const Home = () => {
                                     <div className="about-phone-icon pulse-jewel"><Phone size={18} /></div>
                                     <div>
                                         <div className="about-phone-label">Call for a Free Consultation</div>
-                                        <div className="about-phone-num">+91 91544 91915</div>
+                                        <div className="about-phone-num">+91 9322 22 2821</div>
                                     </div>
                                 </a>
                             </div>
@@ -156,10 +157,10 @@ const Home = () => {
                 <div className="container">
                     <div className="stats-strip-inner">
                         {[
-                            { num: '15+', label: 'Projects Completed' },
+                            { num: '5+', label: 'Residential Projects' },
                             { num: '500+', label: 'Happy Families' },
                             { num: '120+', label: 'Acres Developed' },
-                            { num: '₹50Cr+', label: 'in Investments' },
+                            { num: '2018', label: 'Established Year' },
                         ].map((s, i) => (
                             <div key={i} className="stat-strip-item" data-aos="fade-up" data-aos-delay={i * 80}>
                                 <div className="stat-num">{s.num}</div>

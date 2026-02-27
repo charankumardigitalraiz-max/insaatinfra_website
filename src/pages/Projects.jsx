@@ -8,43 +8,173 @@ const Projects = () => {
     const [searchTerm, setSearchTerm] = useState('');
 
     const projects = [
+        // Apartments
         {
-            id: 'insaat-meadows',
-            title: 'Insaat Meadows',
-            location: 'Sangareddy (Bachepally Village)',
-            type: 'Open Plots',
-            image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=500',
-            status: 'Ready to Construct',
-            price: '₹25L - ₹45L',
-            area: '150 - 300 sq yds'
+            id: 'insaat-glow',
+            title: 'INSAAT Glow',
+            location: 'Pothireddipally, Sangareddy',
+            type: 'Apartment',
+            image: '/images/apartments/glow.jpg',
+            status: 'Upcoming',
+            area: 'Luxury Living'
+        },
+        {
+            id: 'insaat-capetown',
+            title: 'INSAAT Capetown',
+            location: 'Kandi, Sangareddy',
+            type: 'Apartment',
+            image: '/images/apartments/capetown.png',
+            status: 'Ongoing',
+            area: 'Premium Residences'
+        },
+        {
+            id: 'insaat-skyview',
+            title: 'INSAAT Sky View',
+            location: 'Kandi, Sangareddy',
+            type: 'Apartment',
+            image: '/images/apartments/skyview.jpg',
+            status: 'Upcoming',
+            area: 'Luxury Suites'
+        },
+        {
+            id: 'insaat-grace',
+            title: 'INSAAT Grace',
+            location: 'Tolichowki, Hyderabad',
+            type: 'Apartment',
+            image: '/images/apartments/grace.jpg',
+            status: 'Upcoming',
+            area: 'Luxury Living'
+        },
+        {
+            id: 'insaat-abode',
+            title: 'INSAAT Abode',
+            location: 'Malkapur, Sangareddy',
+            type: 'Apartment',
+            image: '/images/apartments/capetown.png', // Fallback
+            status: 'Ongoing',
+            area: 'Premium Living'
         },
         {
             id: 'insaat-bliss',
-            title: 'Insaat Bliss',
-            location: 'Sangareddy',
-            type: 'Luxury Apartments',
-            image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80&w=500',
-            status: 'Upcoming',
-            price: '₹40L - ₹75L',
-            area: '1100 - 1800 sq ft'
+            title: 'INSAAT Bliss',
+            location: 'Malkapur, Sangareddy',
+            type: 'Apartment',
+            image: '/images/apartments/glow.jpg', // Fallback
+            status: 'Completed',
+            area: 'Modern Living'
+        },
+        // Layouts
+        {
+            id: 'insaat-habitat-layout',
+            title: 'INSAAT Habitat',
+            location: 'Malkapur, Sangareddy',
+            type: 'Land Layout',
+            image: '/images/layouts/habitat.png',
+            status: 'Completed',
+            area: 'Gated Community'
         },
         {
-            title: 'Insaat Glow',
+            id: 'insaat-serene',
+            title: 'INSAAT Serene',
+            location: 'Kohir, Sangareddy',
+            type: 'Land Layout',
+            image: '/images/layouts/serene.jpg',
+            status: 'Completed',
+            area: 'Premium Plots'
+        },
+        {
+            id: 'insaat-meadows',
+            title: 'INSAAT Meadows',
+            location: 'Bachepally, Shankrampet',
+            type: 'Land Layout',
+            image: '/images/layouts/meadows.jpg',
+            status: 'Completed',
+            area: 'Gated Community'
+        },
+        {
+            id: 'insaat-ecovalley',
+            title: 'INSAAT Eco Valley',
+            location: 'Sadasivapet, Sangareddy',
+            type: 'Land Layout',
+            image: '/images/layouts/ecovalley.jpg',
+            status: 'Completed',
+            area: 'Sustainable Living'
+        },
+        {
+            id: 'insaat-tadlapally',
+            title: 'Tadlapally Village Layout',
             location: 'Sangareddy',
-            type: 'Premium Development',
-            image: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&q=80&w=500',
+            type: 'Land Layout',
+            image: '/images/layouts/habitat.png', // Fallback
+            status: 'Completed',
+            area: 'Residential Plots'
+        },
+        // Villas
+        {
+            id: 'habitat-triplex',
+            title: 'Habitat Triplex',
+            location: 'Malkapur, Sangareddy',
+            type: 'Villa',
+            image: '/images/villas/habitat.jpg',
+            status: 'Ready to Move',
+            area: 'Luxury Triplex'
+        },
+        {
+            id: 'serene-duplex',
+            title: 'Serene Duplex',
+            location: 'Kohir, Sangareddy',
+            type: 'Villa',
+            image: '/images/villas/serene.jpg',
+            status: 'Ready to Move',
+            area: 'Premium Duplex'
+        },
+        {
+            id: 'lakeview-villas',
+            title: 'Lakeview Villas',
+            location: 'Malkapur, Sangareddy',
+            type: 'Villa',
+            image: '/images/villas/lakeview.jpg',
             status: 'Ongoing',
-            price: '₹55L - ₹1.2Cr',
-            area: '1500 - 3000 sq ft'
+            area: 'Scenic Living'
+        },
+        // Commercial
+        {
+            id: 'motimahal',
+            title: 'Motimahal Complex',
+            location: 'Market Road, Sangareddy',
+            type: 'Commercial',
+            image: '/images/commercial/motimahal.jpg',
+            status: 'Completed',
+            area: 'Premium Retail'
+        },
+        // Interiors
+        {
+            id: 'pink-pearl',
+            title: 'Pink Pearl Boutique',
+            location: 'Sangareddy',
+            type: 'Interior',
+            image: '/images/commercial/motimahal.jpg',
+            status: 'Completed',
+            area: 'Designer Interiors'
+        },
+        {
+            id: 'al-zabihah',
+            title: 'Al-Zabihah Meat Mart',
+            location: 'Tolichowki, Hyderabad',
+            type: 'Interior',
+            image: '/images/apartments/grace.jpg',
+            status: 'Completed',
+            area: 'Premium Commercial'
         }
     ];
 
     const filters = [
         { id: 'all', label: 'All Projects', count: projects.length },
-        { id: 'residential', label: 'Residential', count: projects.filter(p => p.type === 'Residential').length },
+        { id: 'apartment', label: 'Apartments', count: projects.filter(p => p.type === 'Apartment').length },
+        { id: 'villa', label: 'Villas', count: projects.filter(p => p.type === 'Villa').length },
+        { id: 'land', label: 'Land Layouts', count: projects.filter(p => p.type === 'Land Layout').length },
         { id: 'commercial', label: 'Commercial', count: projects.filter(p => p.type === 'Commercial').length },
-        { id: 'ready', label: 'Ready to Move', count: projects.filter(p => p.status === 'Ready to Move').length },
-        { id: 'construction', label: 'Under Construction', count: projects.filter(p => p.status === 'Under Construction').length }
+        { id: 'interior', label: 'Interiors', count: projects.filter(p => p.type === 'Interior').length }
     ];
 
     const investPoints = [
@@ -66,7 +196,7 @@ const Projects = () => {
         {
             icon: <Users size={32} />,
             title: 'Trusted Developer',
-            desc: '15+ years of experience with 500+ satisfied families and 98% client satisfaction.'
+            desc: '6+ years of experience with 500+ satisfied families and 98% client satisfaction.'
         },
         {
             icon: <Home size={32} />,
@@ -82,10 +212,11 @@ const Projects = () => {
 
     const filtered = projects.filter(project => {
         const matchesFilter = activeFilter === 'all' ||
-            (activeFilter === 'residential' && project.type === 'Residential') ||
+            (activeFilter === 'apartment' && project.type === 'Apartment') ||
+            (activeFilter === 'villa' && project.type === 'Villa') ||
+            (activeFilter === 'land' && project.type === 'Land Layout') ||
             (activeFilter === 'commercial' && project.type === 'Commercial') ||
-            (activeFilter === 'ready' && project.status === 'Ready to Move') ||
-            (activeFilter === 'construction' && project.status === 'Under Construction');
+            (activeFilter === 'interior' && project.type === 'Interior');
 
         const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
             project.location.toLowerCase().includes(searchTerm.toLowerCase());
@@ -124,8 +255,8 @@ const Projects = () => {
                     <div className="container">
                         <div className="hero-stats-inner">
                             <div className="hero-stat-item" data-aos="fade-up" data-aos-delay="0">
-                                <div className="hero-stat-number">50+</div>
-                                <div className="hero-stat-label">Projects Completed</div>
+                                <div className="hero-stat-number">2018</div>
+                                <div className="hero-stat-label">Established Year</div>
                             </div>
                             <div className="hero-stat-item" data-aos="fade-up" data-aos-delay="100">
                                 <div className="hero-stat-number">500+</div>
@@ -136,8 +267,8 @@ const Projects = () => {
                                 <div className="hero-stat-label">Acres Developed</div>
                             </div>
                             <div className="hero-stat-item" data-aos="fade-up" data-aos-delay="300">
-                                <div className="hero-stat-number">15+</div>
-                                <div className="hero-stat-label">Years Experience</div>
+                                <div className="hero-stat-number">6+</div>
+                                <div className="hero-stat-label">Years of Excellence</div>
                             </div>
                         </div>
                     </div>
@@ -245,7 +376,7 @@ const Projects = () => {
                             <a href="/contact" className="btn btn-primary">
                                 Schedule Site Visit <ArrowRight size={18} />
                             </a>
-                            <a href="tel:+919154491915" className="btn btn-secondary">
+                            <a href="tel:+919322222821" className="btn btn-secondary">
                                 Call Now
                             </a>
                         </div>

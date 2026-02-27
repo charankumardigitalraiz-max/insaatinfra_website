@@ -5,9 +5,9 @@ import '../styles/about.css';
 const About = () => {
     const stats = [
         { number: '500+', label: 'Happy Families', icon: Users },
-        { number: '15+', label: 'Years Experience', icon: Award },
-        { number: '15+', label: 'Projects Completed', icon: CheckCircle },
-        { number: '98%', label: 'Client Satisfaction', icon: Star }
+        { number: '2018', label: 'Established Year', icon: Award },
+        { number: '5+', label: 'Residential Projects', icon: CheckCircle },
+        { number: '6+', label: 'Years of Excellence', icon: Star }
     ];
 
     const values = [
@@ -35,22 +35,10 @@ const About = () => {
 
     const team = [
         {
-            name: 'Rajesh Kumar',
-            role: 'Founder & CEO',
-            image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=500',
-            desc: 'Visionary leader with 20+ years in real estate development.'
-        },
-        {
-            name: 'Priya Sharma',
-            role: 'Project Director',
-            image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=500',
-            desc: 'Expert in project management and quality assurance.'
-        },
-        {
-            name: 'Amit Patel',
-            role: 'Technical Head',
-            image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=500',
-            desc: 'Civil engineering specialist ensuring structural excellence.'
+            name: 'Expert Construction Team',
+            role: 'Skilled Professionals',
+            image: '/logo.png',
+            desc: 'Our team of experienced engineers and architects ensures every project meets the highest standards of quality and excellence.'
         }
     ];
 
@@ -73,8 +61,9 @@ const About = () => {
                                 <span className="highlight">Creating Futures</span>
                             </h1>
                             <p className="hero-desc">
-                                For over 15 years, we've been transforming landscapes into premium living spaces,
-                                combining architectural excellence with sustainable development practices.
+                                Established in 2018, INSAAT INFRA PROJECTS PVT. LTD. is a leading construction
+                                and infrastructure development company in Sangareddy, specializing in
+                                commercial complexes, residential houses, and gated communities.
                             </p>
                         </div>
                     </div>
@@ -113,9 +102,9 @@ const About = () => {
                                 <h3>Our Mission</h3>
                             </div>
                             <p className="mv-text">
-                                To create exceptional living spaces that enhance quality of life,
-                                foster community development, and contribute positively to the environment
-                                through sustainable and innovative construction practices.
+                                To deliver exceptional construction, infrastructure development, and
+                                engineering services that exceed client expectations through expertise,
+                                professional excellence, and teamwork.
                             </p>
                             <div className="mv-accent"></div>
                         </div>
@@ -128,9 +117,8 @@ const About = () => {
                                 <h3>Our Vision</h3>
                             </div>
                             <p className="mv-text">
-                                To be the most trusted and preferred real estate developer in Telangana,
-                                recognized for excellence in quality, innovation, and customer satisfaction,
-                                setting new standards in residential development.
+                                To be a leader in the engineering and construction industry
+                                recognized for commitment to quality, innovation, and customer satisfaction.
                             </p>
                             <div className="mv-accent"></div>
                         </div>

@@ -49,7 +49,7 @@ const Navbar = () => {
                         {/* Logo Section */}
                         <Link to="/" className="nav-logo">
                             <div className="nav-logo-icon">
-                                <img src='/logo.png' alt="Insaat Infra Logo" />
+                                <img src="/logo.png" alt="Insaat Infra Logo" className="logo-image" />
                             </div>
                             {/* <div className="nav-logo-text">
                                 <span className="nav-logo-name">Insaat Infra</span>
@@ -138,7 +138,7 @@ const Navbar = () => {
                     <div className="mobile-contacts">
                         <a href="tel:+919154491915" className="mobile-contact-link">
                             <Phone size={16} />
-                            <span>+91 91544 91915</span>
+                            <span>+91 9322 22 2821</span>
                         </a>
                         <a href="mailto:info@insaatinfra.in" className="mobile-contact-link">
                             <Mail size={16} />
