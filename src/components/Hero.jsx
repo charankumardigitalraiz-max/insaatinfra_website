@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Search, MapPin, Building2 } from 'lucide-react';
 import '../styles/hero.css';
+import '../styles/banners.css';
 
 const Hero = () => {
     return (
@@ -9,18 +10,11 @@ const Hero = () => {
             {/* Background */}
             <div className="hero-bg">
                 <img
-                    src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80&w=2000"
-                    alt="Luxury Real Estate"
+                    src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=2000"
+                    alt="Cinematic Real Estate"
                 />
             </div>
             <div className="hero-overlay" />
-
-            {/* Modern Particle Effects */}
-            <div className="hero-particles">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
 
             {/* Content */}
             <div className="hero-content">
@@ -28,25 +22,54 @@ const Hero = () => {
                     <div className="hero-inner" data-aos="fade-up">
                         <div className="hero-tag">
                             <span className="hero-tag-line" />
-                            Premium Real Estate · Sangareddy
+                            Premier Real Estate & Infrastructure · Sangareddy
                         </div>
 
                         <h1 className="hero-title">
-                            Transforming<br />
-                            <span className="highlight">Visions into Reality</span>
+                            Find Your<br />
+                            <span className="highlight">Perfect Flats & Plots</span>
                         </h1>
 
                         <p className="hero-subtitle">
-                            Established in 2018, INSAAT INFRA PROJECTS PVT. LTD. is a leading construction
-                            company specializing in premium apartments, luxury villas, and open plots.
+                            Discover premium apartments, luxury villas, and high-growth open plots
+                            designed for excellence and built with trust.
                         </p>
 
-                        <div className="hero-actions">
-                            <Link to="/projects" className="btn btn-secondary btn-modern pulse-ring">
-                                Explore Projects <ArrowRight size={18} />
-                            </Link>
-                            <Link to="/contact" className="btn btn-outline-white btn-modern">
-                                Contact Us
+                        {/* Property Search UI */}
+                        {/* <div className="hero-search-wrapper">
+                            <div className="search-item">
+                                <label><MapPin size={10} /> Location</label>
+                                <select>
+                                    <option>Sangareddy</option>
+                                    <option>Kandi</option>
+                                    <option>Malkapur</option>
+                                </select>
+                            </div>
+                            <div className="search-item">
+                                <label><Building2 size={10} /> Property Type</label>
+                                <select>
+                                    <option>Premium Apartments</option>
+                                    <option>Luxury Villas</option>
+                                    <option>Open Plots</option>
+                                </select>
+                            </div>
+                            <div className="search-item">
+                                <label>Project Status</label>
+                                <select>
+                                    <option>Ongoing</option>
+                                    <option>Ready to Move</option>
+                                    <option>Upcoming</option>
+                                </select>
+                            </div>
+                            <button className="search-btn">
+                                <Search size={20} />
+                                <span>Search</span>
+                            </button>
+                        </div> */}
+
+                        <div className="hero-actions" style={{ marginTop: '30px' }}>
+                            <Link to="/projects" className="btn btn-primary">
+                                Explore All Projects <ArrowRight size={18} />
                             </Link>
                         </div>
                     </div>
@@ -55,7 +78,7 @@ const Hero = () => {
 
             {/* Scroll Indicator */}
             <div className="hero-scroll">
-                <span>Scroll</span>
+                <span>Explore</span>
                 <div className="scroll-indicator">
                     <div className="scroll-dot" />
                 </div>
@@ -67,7 +90,7 @@ const Hero = () => {
                     <div className="hero-stats-inner">
                         <div className="hero-stat-item" data-aos="fade-up" data-aos-delay="0">
                             <div className="hero-stat-number">2018</div>
-                            <div className="hero-stat-label">Established Year</div>
+                            <div className="hero-stat-label">Since</div>
                         </div>
                         <div className="hero-stat-item" data-aos="fade-up" data-aos-delay="100">
                             <div className="hero-stat-number">500+</div>
@@ -78,8 +101,8 @@ const Hero = () => {
                             <div className="hero-stat-label">Acres Developed</div>
                         </div>
                         <div className="hero-stat-item" data-aos="fade-up" data-aos-delay="300">
-                            <div className="hero-stat-number">6+</div>
-                            <div className="hero-stat-label">Years of Excellence</div>
+                            <div className="hero-stat-number">RERA</div>
+                            <div className="hero-stat-label">Certified</div>
                         </div>
                     </div>
                 </div>

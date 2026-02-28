@@ -228,12 +228,14 @@ const Projects = () => {
         <main className="projects-page">
             {/* Hero Section */}
             <section className="projects-hero">
-                <div className="hero-bg-pattern"></div>
-                <div className="hero-particles">
-                    <div className="particle particle-1"></div>
-                    <div className="particle particle-2"></div>
-                    <div className="particle particle-3"></div>
+                <div className="hero-bg">
+                    <img
+                        src="https://images.unsplash.com/photo-1545243424-0ce743321e11?auto=format&fit=crop&q=80&w=2000"
+                        alt="Premium Projects"
+                    />
                 </div>
+                <div className="hero-overlay" />
+
                 <div className="container">
                     <div className="hero-content" data-aos="fade-up">
                         <div className="hero-inner">
@@ -251,7 +253,7 @@ const Projects = () => {
                 </div>
 
                 {/* Stats Bar */}
-                <div className="hero-stats">
+                {/* <div className="hero-stats">
                     <div className="container">
                         <div className="hero-stats-inner">
                             <div className="hero-stat-item" data-aos="fade-up" data-aos-delay="0">
@@ -272,7 +274,7 @@ const Projects = () => {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </section>
 
             {/* Projects Section */}
@@ -280,25 +282,25 @@ const Projects = () => {
                 <div className="container">
                     <div className="section-header" data-aos="fade-up">
                         <span className="section-tag">Explore Our Portfolio</span>
-                        <h2 className="section-title">Featured <span>Projects</span></h2>
+                        <h2 className="section-title">Featured <span className="highlight">Projects</span></h2>
                         <div className="section-divider"></div>
                     </div>
 
                     {/* Search and Filters */}
                     <div className="projects-controls-wrapper" data-aos="fade-up">
-                        <div className="projects-controls-bar">
+                        <div className="search-bar-container">
                             <div className="search-box">
-                                <Search size={18} />
+                                <Search size={20} />
                                 <input
                                     type="text"
-                                    placeholder="Search by name or location..."
+                                    placeholder="Search projects by name or location..."
                                     value={searchTerm}
                                     onChange={(e) => setSearchTerm(e.target.value)}
                                 />
                             </div>
+                        </div>
 
-                            <div className="filter-divider"></div>
-
+                        <div className="filter-tabs-container">
                             <div className="filter-tabs">
                                 {filters.map((filter) => (
                                     <button
@@ -338,7 +340,7 @@ const Projects = () => {
                 <div className="container">
                     <div className="section-header" data-aos="fade-up">
                         <span className="section-tag">Why Choose Us</span>
-                        <h2 className="section-title">Investment <span>Benefits</span></h2>
+                        <h2 className="section-title">Investment <span className="highlight">Benefits</span></h2>
                         <div className="section-divider"></div>
                         <p className="section-desc">
                             Discover why thousands of families trust us with their investment decisions
@@ -365,9 +367,11 @@ const Projects = () => {
 
             {/* CTA Section */}
             <section className="projects-cta-section">
+                <div className="wide-banner-overlay" />
                 <div className="container">
                     <div className="cta-content" data-aos="fade-up">
-                        <h2>Ready to Invest in Your Future?</h2>
+                        <span className="section-tag" style={{ color: 'var(--secondary)' }}>Investment Hub</span>
+                        <h2 className="section-title" style={{ color: 'white' }}>Ready to Invest in Your <span className="highlight">Future?</span></h2>
                         <p>
                             Join hundreds of satisfied families who have made the smart choice.
                             Let's discuss your investment options today.
@@ -376,7 +380,7 @@ const Projects = () => {
                             <a href="/contact" className="btn btn-primary">
                                 Schedule Site Visit <ArrowRight size={18} />
                             </a>
-                            <a href="tel:+919322222821" className="btn btn-secondary">
+                            <a href="tel:+919322222821" className="btn btn-outline-white">
                                 Call Now
                             </a>
                         </div>

@@ -34,7 +34,7 @@ const Contact = () => {
             content: '+91 9322 22 2821',
             subtext: 'Mon - Sat: 9AM - 7PM',
             link: 'tel:+919322222821',
-            color: 'sapphire'
+            color: 'primary'
         },
         {
             icon: <Mail size={32} />,
@@ -42,7 +42,7 @@ const Contact = () => {
             content: 'info@insaatinfra.in',
             subtext: 'We reply within 24 hours',
             link: 'mailto:info@insaatinfra.in',
-            color: 'emerald'
+            color: 'primary'
         },
         {
             icon: <MapPin size={32} />,
@@ -50,7 +50,7 @@ const Contact = () => {
             content: 'Opp Hotel Wood Bridge',
             subtext: 'Lakdikapul, Hyderabad - 500004',
             link: 'https://goo.gl/maps/lakdikapul-hyderabad',
-            color: 'ruby'
+            color: 'primary'
         }
     ];
 
@@ -64,12 +64,14 @@ const Contact = () => {
         <main className="contact-page">
             {/* Hero Section */}
             <section className="contact-hero">
-                <div className="hero-bg-pattern"></div>
-                <div className="hero-shapes">
-                    <div className="shape shape-1"></div>
-                    <div className="shape shape-2"></div>
-                    <div className="shape shape-3"></div>
+                <div className="hero-bg">
+                    <img
+                        src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2000"
+                        alt="Contact Us"
+                    />
                 </div>
+                <div className="hero-overlay" />
+
                 <div className="container">
                     <div className="hero-content" data-aos="fade-up">
                         <div className="hero-inner">
@@ -87,7 +89,7 @@ const Contact = () => {
                 </div>
 
                 {/* Stats Bar */}
-                <div className="hero-stats">
+                {/* <div className="hero-stats">
                     <div className="container">
                         <div className="hero-stats-inner">
                             <div className="hero-stat-item" data-aos="fade-up" data-aos-delay="0">
@@ -108,7 +110,7 @@ const Contact = () => {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </section>
 
             {/* Contact Cards Section */}
@@ -133,9 +135,9 @@ const Contact = () => {
                                         <p className="card-main">{card.content}</p>
                                         <p className="card-sub">{card.subtext}</p>
                                     </div>
-                                    <div className="card-arrow">
+                                    {/* <div className="card-arrow">
                                         <Send size={18} />
-                                    </div>
+                                    </div> */}
                                 </div>
                             </a>
                         ))}
@@ -150,7 +152,8 @@ const Contact = () => {
                         {/* Left: Info & Hours */}
                         <div className="contact-info" data-aos="fade-right">
                             <div className="info-header">
-                                <h2>Ready to Get Started?</h2>
+                                <span className="section-tag">Direct Contact</span>
+                                <h2 className="section-title">Ready to <span className="highlight">Get Started?</span></h2>
                                 <p>
                                     Have questions about our projects or want to schedule a site visit?
                                     Fill out the form or reach out to us using the contact details below.

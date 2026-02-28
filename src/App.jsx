@@ -6,9 +6,11 @@ import 'aos/dist/aos.css'
 // Global base styles
 import './index.css'
 
+// Global components
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import ScrollToTop from './components/ScrollToTop'
+import SocialBand from './components/SocialBand'
 
 import Home from './pages/Home'
 import About from './pages/About'
@@ -19,6 +21,7 @@ import News from './pages/News'
 import Careers from './pages/Careers'
 import PartnerWithUs from './pages/PartnerWithUs'
 import ProjectDetail from './pages/ProjectDetail'
+import PrivacyPolicy from './pages/PrivacyPolicy'
 
 function App() {
   useEffect(() => {
@@ -99,6 +102,7 @@ function App() {
       <ScrollToTop />
       <div className="app">
         <Navbar />
+        <SocialBand />
         <Routes>
 
           <Route path="/" element={<Home />} />
@@ -110,6 +114,7 @@ function App() {
           <Route path="/partner" element={<PartnerWithUs />} />
           <Route path="/project/:id" element={<ProjectDetail />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/privacy" element={<PrivacyPolicy />} />
         </Routes>
         <Footer />
       </div>

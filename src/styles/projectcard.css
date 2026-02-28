@@ -15,7 +15,7 @@
 .project-card:hover {
     transform: translateY(-15px);
     box-shadow: 0 30px 80px rgba(0, 33, 71, 0.15);
-    border-color: rgba(212, 175, 55, 0.2);
+    border-color: rgba(255, 215, 0, 0.2);
 }
 
 /* ── Image Container ────────────────────────── */
@@ -137,7 +137,7 @@
 }
 
 .card-location svg {
-    color: var(--sapphire);
+    color: var(--secondary);
 }
 
 .card-type {

@@ -14,6 +14,13 @@ const PartnerWithUs = () => {
     return (
         <main className="partner-page">
             <section className="partner-hero">
+                <div className="hero-bg">
+                    <img
+                        src="https://images.unsplash.com/photo-1600880210119-75ee99bb4823?auto=format&fit=crop&q=80&w=2000"
+                        alt="Partner With Us"
+                    />
+                </div>
+                <div className="hero-overlay" />
                 <div className="container">
                     <div className="hero-content" data-aos="fade-up">
                         <div className="hero-inner">

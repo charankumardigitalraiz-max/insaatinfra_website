@@ -1,22 +1,52 @@
 /* Page Wrapper */
 
 .careers-hero {
-    padding: 100px 0 20px;
-    /* Standardized section padding */
-    background: var(--sapphire-dark);
+    position: relative;
+    padding: 0;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    background: var(--primary);
+    overflow: hidden;
     color: white;
+}
+
+.careers-hero .hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.careers-hero .hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.careers-hero .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom,
+            rgba(10, 37, 64, 0.8),
+            rgba(10, 37, 64, 0.9));
+    z-index: 2;
 }
 
 .careers-hero .hero-content {
     position: relative;
-    z-index: 2;
+    z-index: 3;
     text-align: center;
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
-    padding: 80px 20px 60px;
-    /* Standardized content padding */
+    padding: 160px 20px 80px;
     display: flex;
-    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .careers-hero .hero-content {
+        padding: 140px 20px 60px;
+    }
 }
 
 .hero-inner {
@@ -83,14 +113,14 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border: 1px solid rgba(0, 52, 153, 0.05);
+    border: 1px solid rgba(10, 37, 64, 0.05);
     transition: var(--transition);
 }
 
 .job-card:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-md);
-    border-color: var(--sapphire-light);
+    border-color: var(--secondary);
 }
 
 .job-title {

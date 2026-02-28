@@ -46,12 +46,14 @@ const About = () => {
         <main className="about-page">
             {/* Hero Section */}
             <section className="about-hero">
-                <div className="hero-bg-pattern"></div>
-                <div className="hero-floating-shapes">
-                    <div className="shape shape-1"></div>
-                    <div className="shape shape-2"></div>
-                    <div className="shape shape-3"></div>
+                <div className="hero-bg">
+                    <img
+                        src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2000"
+                        alt="Corporate Excellence"
+                    />
                 </div>
+                <div className="hero-overlay" />
+
                 <div className="container">
                     <div className="hero-content" data-aos="fade-up">
                         <div className="hero-inner">
@@ -70,7 +72,7 @@ const About = () => {
                 </div>
 
                 {/* Stats Bar */}
-                <div className="hero-stats">
+                {/* <div className="hero-stats">
                     <div className="container">
                         <div className="hero-stats-inner">
                             {stats.map((stat, i) => {
@@ -87,7 +89,7 @@ const About = () => {
                             })}
                         </div>
                     </div>
-                </div>
+                </div> */}
             </section>
 
             {/* Mission & Vision */}
@@ -131,7 +133,7 @@ const About = () => {
                 <div className="container">
                     <div className="section-header" data-aos="fade-up">
                         <span className="section-tag">Our Core Values</span>
-                        <h2 className="section-title">What Drives <span>Us Forward</span></h2>
+                        <h2 className="section-title">What Drives <span className="highlight">Us Forward</span></h2>
                         <div className="section-divider"></div>
                     </div>
 
@@ -161,7 +163,7 @@ const About = () => {
                 <div className="container">
                     <div className="section-header" data-aos="fade-up">
                         <span className="section-tag">Leadership Team</span>
-                        <h2 className="section-title">Meet Our <span>Experts</span></h2>
+                        <h2 className="section-title">Meet Our <span className="highlight">Experts</span></h2>
                         <div className="section-divider"></div>
                     </div>
 
@@ -189,9 +191,11 @@ const About = () => {
 
             {/* CTA Section */}
             <section className="about-cta-section">
+                <div className="wide-banner-overlay" />
                 <div className="container">
                     <div className="cta-content" data-aos="fade-up">
-                        <h2>Ready to Start Your Journey?</h2>
+                        <span className="section-tag" style={{ color: 'var(--secondary)' }}>Get Started</span>
+                        <h2 className="section-title" style={{ color: 'white' }}>Ready to Start Your <span className="highlight">Journey?</span></h2>
                         <p>
                             Discover our premium projects and find the perfect home for your family.
                             Let's build your dream together.
@@ -200,7 +204,7 @@ const About = () => {
                             <a href="/projects" className="btn btn-primary">
                                 View Projects <ArrowRight size={18} />
                             </a>
-                            <a href="/contact" className="btn btn-secondary">
+                            <a href="/contact" className="btn btn-outline-white">
                                 Get In Touch
                             </a>
                         </div>

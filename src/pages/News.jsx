@@ -18,13 +18,28 @@ const News = () => {
             date: 'February 28, 2024',
             category: 'Market News',
             desc: 'Sangareddy is emerging as the top investment destination in Telangana.',
-            image: 'https://images.unsplash.com/photo-1460472178825-e51c06289900?auto=format&fit=crop&q=80&w=1000'
-        }
+            image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=1000'
+        },
+        // {
+        //     id: ,
+        //     title: 'Real Estate Trends in Sangareddy',
+        //     date: 'February 28, 2024',
+        //     category: 'Market News',
+        //     desc: 'Sangareddy is emerging as the top investment destination in Telangana.',
+        //     image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=1000'
+        // }
     ];
 
     return (
         <main className="news-page">
             <section className="news-hero">
+                <div className="hero-bg">
+                    <img
+                        src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=2000"
+                        alt="News & Updates"
+                    />
+                </div>
+                <div className="hero-overlay" />
                 <div className="container">
                     <div className="hero-content" data-aos="fade-up">
                         <div className="hero-inner">
@@ -53,7 +68,8 @@ const News = () => {
                                     <h2 className="news-title">{item.title}</h2>
                                     <p className="news-excerpt">{item.desc}</p>
                                     <button className="news-link">
-                                        Read More <ArrowRight size={16} />
+                                        <span>Read More</span>
+                                        <ArrowRight size={18} />
                                     </button>
                                 </div>
                             </article>

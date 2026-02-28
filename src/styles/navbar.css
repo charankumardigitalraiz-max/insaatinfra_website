@@ -3,13 +3,12 @@
    ============================================ */
 
 :root {
-    --nav-height: 80px;
-    --nav-glass-bg: rgba(255, 255, 255, 0.05);
-    --nav-glass-scrolled: rgba(255, 255, 255, 0.85);
-    /* --nav-glass-scrolled: rgba(255, 255, 255, 0.85); */
-    --nav-border: rgba(255, 255, 255, 0.1);
-    --nav-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-    --nav-blur: 15px;
+    --nav-height: 72px;
+    --nav-glass-bg: rgba(255, 255, 255, 0.95);
+    --nav-glass-scrolled: rgba(255, 255, 255, 1);
+    --nav-border: rgba(10, 37, 64, 0.1);
+    --nav-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    --nav-blur: 10px;
 }
 
 /* ── Main Header ─────────────────────────────── */
@@ -69,6 +68,7 @@
     gap: 12px;
     text-decoration: none;
     transition: transform 0.3s ease;
+    flex-shrink: 0;
 }
 
 .nav-logo:hover {
@@ -76,16 +76,23 @@
 }
 
 .nav-logo-icon {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+@media (min-width: 768px) {
+    .nav-logo-icon {
+        width: 80px;
+        height: 80px;
+    }
+}
+
 .nav-logo-icon img {
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: contain;
 }
 
@@ -113,7 +120,7 @@
 }
 
 .header.scrolled .nav-logo-name {
-    color: var(--sapphire-dark);
+    color: var(--primary);
 }
 
 .header.scrolled .nav-logo-sub {
@@ -166,8 +173,8 @@
 }
 
 .header.scrolled .nav-item.active {
-    background: var(--sapphire);
-    color: white;
+    background: var(--secondary);
+    color: var(--primary-dark);
 }
 
 /* ── Actions ─────────────────────────────────── */
@@ -201,7 +208,7 @@
 
 .btn-enquire:hover {
     transform: translateY(-2px) scale(1.05);
-    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
+    box-shadow: 0 8px 25px rgba(255, 215, 0, 0.3);
 }
 
 /* ── Mobile Toggle ───────────────────────────── */
@@ -209,9 +216,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.05);
     border: none;
-    color: white;
+    color: var(--text-dark);
+    /* Always dark as requested */
     width: 44px;
     height: 44px;
     border-radius: 50%;
@@ -231,8 +239,8 @@
 }
 
 .mobile-toggle:hover {
-    background: white;
-    color: var(--sapphire);
+    background: rgba(0, 0, 0, 0.1);
+    color: var(--text-dark);
 }
 
 /* ── Mobile Menu ─────────────────────────────── */
@@ -328,8 +336,9 @@
 .mobile-nav-link:hover,
 .mobile-nav-link.active {
     background: var(--bg-light);
-    color: var(--sapphire);
+    color: var(--secondary-dark);
     padding-left: 25px;
+    border-left: 4px solid var(--secondary);
 }
 
 .mobile-menu-footer {

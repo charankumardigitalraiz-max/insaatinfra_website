@@ -86,13 +86,13 @@ const Home = () => {
                         <div className="about-img-box" data-aos="fade-right">
                             <div className="about-img-main">
                                 <img
-                                    src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=800"
+                                    src="/images/apartments/skyview.jpg"
                                     alt="Premium Construction"
                                 />
                             </div>
                             <div className="about-img-secondary">
                                 <img
-                                    src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=500"
+                                    src="/images/layouts/habitat.png"
                                     alt="Modern Architecture"
                                 />
                             </div>
@@ -110,23 +110,23 @@ const Home = () => {
                         <div className="about-text" data-aos="fade-left">
                             <span className="section-tag">Who We Are</span>
                             <h2 className="about-title">
-                                Building Legacies,<br />
-                                <span>One Home At a Time</span>
+                                Specialized in Modern<br />
+                                <span>Infrastructure & Residential Excellence</span>
                             </h2>
                             <p className="about-desc">
-                                Insaat Infra Projects Pvt Ltd is a premier real estate developer based in Sangareddy.
-                                We specialize in crafting high-quality residential communities that offer the perfect
-                                blend of luxury, comfort, and lasting value.
+                                Insaat Infra Projects Pvt Ltd is a premier developer and infrastructure company
+                                based in Sangareddy. We are committed to building high-quality residential communities
+                                and sustainable infrastructure that stand the test of time.
                             </p>
 
                             <div className="about-highlights stagger-animation">
                                 {[
-                                    'RERA Registered & Fully Transparent',
-                                    'Clear Legal Title — Zero Disputes',
-                                    'Bank Loan Approved Projects',
-                                    'Gated Community Layouts with Amenities',
-                                    'Post-Sale Customer Support',
-                                    'Eco-Friendly & Sustainable Design',
+                                    'RERA Registered & Legal Transparency',
+                                    'Architectural Excellence & Modern Design',
+                                    'Strategic High-Growth Locations',
+                                    'Sustainable & Eco-Friendly Construction',
+                                    'Comprehensive Post-Sale Support',
+                                    'Proven Track Record of Delivery',
                                 ].map(item => (
                                     <div key={item} className="about-highlight-item hover-lift">
                                         <span className="about-check"><CheckCircle2 size={16} /></span>
@@ -136,18 +136,30 @@ const Home = () => {
                             </div>
 
                             <div className="about-cta">
-                                <Link to="/about" className="btn btn-primary btn-modern magnetic-hover">
-                                    Our Story <ArrowRight size={16} />
+                                <Link to="/about" className="btn btn-primary">
+                                    Company Profile <ArrowRight size={16} />
                                 </Link>
                                 <a href="tel:+919154491915" className="about-phone-btn hover-lift">
-                                    <div className="about-phone-icon pulse-jewel"><Phone size={18} /></div>
+                                    <div className="about-phone-icon"><Phone size={18} /></div>
                                     <div>
-                                        <div className="about-phone-label">Call for a Free Consultation</div>
+                                        <div className="about-phone-label">Direct Consultation</div>
                                         <div className="about-phone-num">+91 9322 22 2821</div>
                                     </div>
                                 </a>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* ── Banner 1: Modern Luxury ────────────────── */}
+            <section className="wide-banner" style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&q=80&w=2000")' }}>
+                <div className="wide-banner-overlay" style={{ background: 'linear-gradient(90deg, rgba(10, 37, 64, 0.95) 0%, rgba(10, 37, 64, 0.85) 10%)' }} />
+                <div className="container">
+                    <div className="wide-banner-content" data-aos="fade-right">
+                        <h2>Experience Modern <br />Luxury Living</h2>
+                        <p>Our premium apartments offer the perfect blend of sophisticated design and world-class amenities.</p>
+                        <Link to="/gallery" className="btn btn-secondary">View Sample Flat <ArrowRight size={16} /></Link>
                     </div>
                 </div>
             </section>
@@ -199,6 +211,18 @@ const Home = () => {
                 </div>
             </section>
 
+            {/* ── Banner 2: Strategic Investment ──────────── */}
+            <section className="wide-banner" style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2000")' }}>
+                <div className="wide-banner-overlay" style={{ background: 'linear-gradient(90deg, rgba(10, 37, 64, 0.95) 0%, rgba(10, 37, 64, 0.2) 100%)' }} />
+                <div className="container">
+                    <div className="wide-banner-content" data-aos="fade-left" style={{ marginLeft: 'auto', textAlign: 'right' }}>
+                        <h2>Strategic Investment <br />High ROI Locations</h2>
+                        <p>Secure your future with RERA approved projects in the most rapidly developing areas of Sangareddy.</p>
+                        <Link to="/contact" className="btn btn-primary">Invest Now <ArrowRight size={16} /></Link>
+                    </div>
+                </div>
+            </section>
+
             {/* ── Process / How It Works ─────────────── */}
             <section className="process-section">
                 <div className="container">
@@ -243,6 +267,17 @@ const Home = () => {
                                 <div className="why-card-line" />
                             </div>
                         ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* ── Banner 3: Community ────────────────────── */}
+            <section className="wide-banner" style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=2000")' }}>
+                <div className="wide-banner-overlay" />
+                <div className="container">
+                    <div className="wide-banner-content" data-aos="zoom-in" style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
+                        <h2>Building Communities <br />Creating Legacies</h2>
+                        <p>Join 500+ happy families who have found their dream homes with Insaat Infra.</p>
                     </div>
                 </div>
             </section>

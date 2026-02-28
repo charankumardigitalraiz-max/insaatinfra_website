@@ -9,57 +9,45 @@
 /* ── Hero Section ───────────────────────────── */
 .about-hero {
     position: relative;
-    padding: 100px 0 20px;
-    /* Added top padding to section */
-    background: var(--grad-primary);
+    padding: 0;
+    min-height: 85vh;
+    /* Increased for premium desktop feel */
+    display: flex;
+    align-items: center;
+    /* Centered on desktop */
+    background: var(--primary);
     overflow: hidden;
     color: white;
 }
 
-.hero-bg-pattern {
+@media (max-width: 992px) {
+    .about-hero {
+        min-height: auto;
+        flex-direction: column;
+        justify-content: flex-end;
+        /* Stacking for mobile */
+    }
+}
+
+.about-hero .hero-bg {
     position: absolute;
     inset: 0;
-    background-image:
-        radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 40% 40%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+    z-index: 1;
 }
 
-.hero-floating-shapes {
+.about-hero .hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-hero .hero-overlay {
     position: absolute;
     inset: 0;
-    overflow: hidden;
-}
-
-.shape {
-    position: absolute;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.1);
-    animation: float 6s ease-in-out infinite;
-}
-
-.shape-1 {
-    width: 200px;
-    height: 200px;
-    top: 10%;
-    left: 10%;
-    animation-delay: 0s;
-}
-
-.shape-2 {
-    width: 150px;
-    height: 150px;
-    top: 60%;
-    right: 15%;
-    animation-delay: 2s;
-}
-
-.shape-3 {
-    width: 100px;
-    height: 100px;
-    bottom: 20%;
-    left: 20%;
-    animation-delay: 4s;
+    background: linear-gradient(to bottom,
+            rgba(10, 37, 64, 0.8),
+            rgba(10, 37, 64, 0.9));
+    z-index: 2;
 }
 
 @keyframes float {
@@ -76,14 +64,19 @@
 
 .hero-content {
     position: relative;
-    z-index: 2;
+    z-index: 3;
     text-align: center;
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
-    padding: 80px 20px 60px;
-    /* Consistent top gap */
+    padding: 160px 20px 80px;
     display: flex;
-    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .hero-content {
+        padding: 140px 20px 60px;
+    }
 }
 
 .hero-inner {
@@ -148,6 +141,12 @@
     gap: 0;
 }
 
+@media (max-width: 480px) {
+    .hero-stats-inner {
+        grid-template-columns: 1fr;
+    }
+}
+
 @media (min-width: 768px) {
     .hero-stats-inner {
         grid-template-columns: repeat(4, 1fr);
@@ -205,8 +204,8 @@
 
 /* ── Mission & Vision Section ───────────────── */
 .mission-vision-section {
-    padding: 100px 0;
-    background: var(--bg-light);
+    padding: 80px 0;
+    background: var(--bg-white);
 }
 
 .mv-grid {
@@ -299,8 +298,8 @@
 
 /* ── Values Section ─────────────────────────── */
 .values-section {
-    padding: 120px 0;
-    background: #f8fafc;
+    padding: 80px 0;
+    background: #fcfcfc;
     position: relative;
     overflow: hidden;
 }
@@ -388,8 +387,8 @@
 }
 
 .value-card:hover .value-icon-box {
-    background: var(--grad-primary);
-    color: white;
+    background: var(--grad-secondary);
+    color: var(--primary-dark);
     transform: rotate(10deg);
 }
 
@@ -432,13 +431,13 @@
 
 /* ── Team Section ───────────────────────────── */
 .team-section {
-    padding: 100px 0;
-    background: var(--bg-light);
+    padding: 80px 0;
+    background: var(--bg-white);
 }
 
 .team-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 40px;
 }
 
@@ -508,8 +507,8 @@
 }
 
 .team-social-link:hover {
-    background: white;
-    color: var(--sapphire);
+    background: var(--secondary);
+    color: var(--primary-dark);
     transform: scale(1.1);
 }
 
@@ -547,10 +546,29 @@
 
 /* ── CTA Section ────────────────────────────── */
 .about-cta-section {
+    position: relative;
     padding: 100px 0;
-    background: linear-gradient(135deg, var(--sapphire) 0%, var(--emerald) 100%);
+    background-image: url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80&w=2000');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     color: white;
     text-align: center;
+    overflow: hidden;
+}
+
+.wide-banner-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom,
+            rgba(10, 37, 64, 0.85),
+            rgba(10, 37, 64, 0.95));
+    z-index: 1;
+}
+
+.cta-content {
+    position: relative;
+    z-index: 2;
 }
 
 .cta-content h2 {
@@ -591,9 +609,9 @@
 }
 
 .cta-buttons .btn-primary {
-    background: white;
-    color: var(--sapphire);
-    border: 2px solid white;
+    background: var(--secondary);
+    color: var(--primary-dark);
+    border: 2px solid var(--secondary);
 }
 
 .cta-buttons .btn-primary:hover {
@@ -628,11 +646,13 @@
     }
 
     .hero-title {
-        font-size: 2.2rem;
+        font-size: 2rem;
+        line-height: 1.2;
     }
 
     .hero-desc {
-        font-size: 1.1rem;
+        font-size: 1rem;
+        margin-bottom: 30px;
     }
 
     .hero-stats {

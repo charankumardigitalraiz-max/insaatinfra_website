@@ -9,56 +9,44 @@
 /* ── Hero Section ───────────────────────────── */
 .projects-hero {
     position: relative;
-    background: var(--grad-primary);
+    padding: 0;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    /* Centered on desktop */
+    background: var(--primary);
     overflow: hidden;
     color: white;
-    padding: 100px 0 20px;
 }
 
-.hero-bg-pattern {
+@media (max-width: 992px) {
+    .projects-hero {
+        min-height: auto;
+        flex-direction: column;
+        justify-content: flex-end;
+        /* Stacking for mobile */
+    }
+}
+
+.projects-hero .hero-bg {
     position: absolute;
     inset: 0;
-    background-image:
-        radial-gradient(circle at 25% 75%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 75% 25%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+    z-index: 1;
 }
 
-.hero-particles {
+.projects-hero .hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.projects-hero .hero-overlay {
     position: absolute;
     inset: 0;
-    overflow: hidden;
-}
-
-.particle {
-    position: absolute;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.15);
-    animation: particleFloat 8s ease-in-out infinite;
-}
-
-.particle-1 {
-    width: 120px;
-    height: 120px;
-    top: 15%;
-    left: 15%;
-    animation-delay: 0s;
-}
-
-.particle-2 {
-    width: 80px;
-    height: 80px;
-    top: 70%;
-    right: 20%;
-    animation-delay: 3s;
-}
-
-.particle-3 {
-    width: 60px;
-    height: 60px;
-    bottom: 25%;
-    left: 25%;
-    animation-delay: 6s;
+    background: linear-gradient(to bottom,
+            rgba(10, 37, 64, 0.8),
+            rgba(10, 37, 64, 0.9));
+    z-index: 2;
 }
 
 @keyframes particleFloat {
@@ -77,15 +65,19 @@
 
 .hero-content {
     position: relative;
-    z-index: 2;
+    z-index: 3;
     text-align: center;
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
-    padding: 80px 20px 40px;
-    /* Consistent top gap */
+    padding: 160px 20px 80px;
     display: flex;
-    align-items: center;
-    color: white;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .hero-content {
+        padding: 140px 20px 60px;
+    }
 }
 
 .hero-inner {
@@ -151,6 +143,12 @@
     gap: 0;
 }
 
+@media (max-width: 480px) {
+    .hero-stats-inner {
+        grid-template-columns: 1fr;
+    }
+}
+
 @media (min-width: 768px) {
     .hero-stats-inner {
         grid-template-columns: repeat(4, 1fr);
@@ -191,53 +189,46 @@
 
 .projects-controls-wrapper {
     margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
 }
 
-.projects-controls-bar {
+.search-bar-container {
     background: white;
-    padding: 10px 20px;
-    border-radius: 60px;
+    padding: 16px 28px;
+    border-radius: 50px;
     display: flex;
     align-items: center;
-    gap: 15px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     border: 1px solid rgba(0, 0, 0, 0.05);
-    max-width: 1100px;
-    margin: 0 auto;
-    flex-wrap: wrap;
-    /* Allow wrapping for filters */
+    width: 100%;
+    max-width: 600px;
+    transition: var(--transition);
 }
 
-@media (max-width: 900px) {
-    .projects-controls-bar {
-        border-radius: 30px;
-        padding: 20px;
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .filter-divider {
-        display: none;
-    }
+.search-bar-container:focus-within {
+    box-shadow: 0 15px 40px rgba(0, 33, 71, 0.12);
+    border-color: rgba(255, 215, 0, 0.3);
+    transform: translateY(-2px);
 }
 
 .search-box {
     display: flex;
     align-items: center;
-    padding: 0;
-    flex: 1;
-    min-width: 200px;
+    width: 100%;
 }
 
 .search-box svg {
     color: var(--sapphire);
-    margin-right: 12px;
+    margin-right: 14px;
     flex-shrink: 0;
 }
 
 .search-box input {
     border: none;
-    font-size: 0.95rem;
+    font-size: 1.05rem;
     color: var(--text-dark);
     width: 100%;
     outline: none;
@@ -245,27 +236,20 @@
 }
 
 .search-box input::placeholder {
-    color: var(--text-light);
+    color: var(--text-muted);
 }
 
-.filter-divider {
-    width: 1px;
-    height: 30px;
-    background: rgba(0, 0, 0, 0.1);
-    flex-shrink: 0;
+.filter-tabs-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .filter-tabs {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
-    justify-content: flex-end;
-}
-
-@media (max-width: 900px) {
-    .filter-tabs {
-        justify-content: center;
-    }
+    gap: 12px;
+    justify-content: center;
 }
 
 .filter-tab {
@@ -292,9 +276,9 @@
 }
 
 .filter-tab.active {
-    background: var(--grad-primary);
-    color: white;
-    box-shadow: 0 8px 15px rgba(0, 52, 153, 0.15);
+    background: var(--grad-secondary);
+    color: var(--primary-dark);
+    box-shadow: 0 8px 15px rgba(255, 215, 0, 0.25);
 }
 
 .filter-count {
@@ -342,8 +326,8 @@
 
 /* ── Investment Section ─────────────────────── */
 .invest-section {
-    padding: 100px 0;
-    background: white;
+    padding: 80px 0;
+    background: var(--bg-white);
 }
 
 .invest-grid {
@@ -426,8 +410,8 @@
 }
 
 .invest-card:hover .invest-icon-box {
-    background: var(--grad-primary);
-    color: white;
+    background: var(--grad-secondary);
+    color: var(--primary-dark);
     transform: rotate(10deg);
 }
 
@@ -470,10 +454,29 @@
 
 /* ── CTA Section ────────────────────────────── */
 .projects-cta-section {
+    position: relative;
     padding: 100px 0;
-    background: linear-gradient(135deg, var(--sapphire) 0%, var(--emerald) 100%);
+    background-image: url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=2000');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     color: white;
     text-align: center;
+    overflow: hidden;
+}
+
+.wide-banner-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom,
+            rgba(10, 37, 64, 0.85),
+            rgba(10, 37, 64, 0.95));
+    z-index: 1;
+}
+
+.cta-content {
+    position: relative;
+    z-index: 2;
 }
 
 .cta-content h2 {
@@ -551,11 +554,13 @@
     }
 
     .hero-title {
-        font-size: 2.2rem;
+        font-size: 2rem;
+        line-height: 1.2;
     }
 
     .hero-desc {
-        font-size: 1.1rem;
+        font-size: 1rem;
+        margin-bottom: 30px;
     }
 
     .hero-stats {

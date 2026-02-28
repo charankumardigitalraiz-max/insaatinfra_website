@@ -23,6 +23,13 @@ const Careers = () => {
     return (
         <main className="careers-page">
             <section className="careers-hero">
+                <div className="hero-bg">
+                    <img
+                        src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=2000"
+                        alt="Join Our Team"
+                    />
+                </div>
+                <div className="hero-overlay" />
                 <div className="container">
                     <div className="hero-content" data-aos="fade-up">
                         <div className="hero-inner">

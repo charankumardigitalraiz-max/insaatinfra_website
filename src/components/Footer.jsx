@@ -14,7 +14,7 @@ const Footer = () => {
         { name: 'Gallery', path: '/gallery', icon: Image },
         { name: 'News', path: '/news', icon: FileText },
         { name: 'Careers', path: '/careers', icon: Briefcase },
-        { name: 'Partner with Us', path: '/partner', icon: Handshake },
+        // { name: 'Partner with Us', path: '/partner', icon: Handshake },
         { name: 'Contact Us', path: '/contact', icon: MessageCircle },
     ];
 
@@ -139,7 +139,7 @@ const Footer = () => {
                             </div>
 
                             {/* Newsletter */}
-                            <div className="footer-newsletter">
+                            {/* <div className="footer-newsletter">
                                 <h4 className="newsletter-title">Stay Updated</h4>
                                 <p className="newsletter-desc">
                                     Get the latest updates on our projects and exclusive offers.
@@ -165,7 +165,7 @@ const Footer = () => {
                                         </div>
                                     )}
                                 </form>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>
@@ -176,12 +176,12 @@ const Footer = () => {
                 <div className="container">
                     <div className="footer-bottom-content">
                         <p className="footer-copy">
-                            © 2026 Insaat Infra Projects Pvt Ltd. All rights reserved.
+                            &copy; {new Date().getFullYear()} Insaat Infra Projects Pvt Ltd. All rights reserved.
                         </p>
                         <div className="footer-bottom-links">
-                            <a href="#" className="footer-bottom-link">Privacy Policy</a>
+                            <Link to="/privacy" className="footer-bottom-link">Privacy Policy</Link>
                             <span className="footer-separator">•</span>
-                            <a href="#" className="footer-bottom-link">Terms & Conditions</a>
+                            <a href="#" className="footer-bottom-link">Terms of Service</a>
                             <span className="footer-separator">•</span>
                             <a href="#" className="footer-bottom-link">Sitemap</a>
                         </div>

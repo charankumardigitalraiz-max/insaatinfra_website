@@ -183,74 +183,87 @@ const ProjectDetail = () => {
             <div className="container main-content-layout">
                 <div className="content-area">
                     {/* Project Overview */}
-                    <section id="overview" className="detail-section">
+                    <section id="overview" className="detail-section premium-card-section">
                         <div className="section-header-small">
                             <span className="tag">The Vision</span>
                             <h2>Project Overview</h2>
+                            <div className="heading-divider"></div>
                         </div>
-                        <p className="project-full-desc">{project.fullDesc}</p>
+                        <p className="project-full-desc lead-text">{project.fullDesc}</p>
 
-                        <div className="stats-grid-circles">
+                        <div className="stats-showcase-container">
                             {project.stats.map((stat, i) => (
-                                <div key={i} className="stat-circle-item">
-                                    <div className="stat-circle-value">{stat.value}</div>
-                                    <div className="stat-circle-label">{stat.label}</div>
+                                <div key={i} className="stat-showcase-box">
+                                    <div className="stat-showcase-bg"></div>
+                                    <div className="stat-content">
+                                        <div className="stat-value">{stat.value}</div>
+                                        <div className="stat-label">{stat.label}</div>
+                                    </div>
                                 </div>
                             ))}
                         </div>
                     </section>
 
-                    {/* Project Highlights */}
-                    <section id="highlights" className="detail-section highlight-bg">
+                    {/* Project Highlights Grid Layer */}
+                    <section id="highlights" className="detail-section">
                         <div className="section-header-small">
                             <span className="tag">Why This Project</span>
                             <h2>Core Highlights</h2>
+                            <div className="heading-divider"></div>
                         </div>
-                        <div className="highlights-grid">
+                        <div className="highlights-feature-grid">
                             {project.highlights.map((item, i) => (
-                                <div key={i} className="highlight-item" data-aos="fade-up" data-aos-delay={i * 50}>
-                                    <CheckCircle size={20} className="check-icon" />
-                                    <span>{item}</span>
+                                <div key={i} className="highlight-feature-card" data-aos="fade-up" data-aos-delay={i * 50}>
+                                    <div className="highlight-icon-wrap">
+                                        <CheckCircle size={24} className="check-icon-premium" />
+                                    </div>
+                                    <div className="highlight-text-content">
+                                        <h4>{item}</h4>
+                                    </div>
                                 </div>
                             ))}
                         </div>
                     </section>
 
-                    {/* Amenities */}
-                    <section id="amenities" className="detail-section">
-                        <div className="section-header-small">
-                            <span className="tag">Lifestyle</span>
+                    {/* Amenities Modern Flex */}
+                    <section id="amenities" className="detail-section amenities-section-bg">
+                        <div className="section-header-small center-head">
+                            <span className="tag">Lifestyle Standard</span>
                             <h2>Premium Amenities</h2>
+                            <div className="heading-divider center-div"></div>
                         </div>
-                        <div className="amenities-grid-modern">
+                        <div className="amenities-grid-premium">
                             {project.amenities.map((item, i) => {
                                 const Icon = item.icon;
                                 return (
-                                    <div key={i} className="amenity-card-modern" data-aos="fade-up" data-aos-delay={i * 80}>
-                                        <div className="icon-box">
-                                            <Icon size={24} />
+                                    <div key={i} className="amenity-item-premium" data-aos="zoom-in" data-aos-delay={i * 50}>
+                                        <div className="amenity-icon-block">
+                                            <Icon size={28} />
                                         </div>
-                                        <span>{item.name}</span>
+                                        <span className="amenity-label">{item.name}</span>
                                     </div>
                                 );
                             })}
                         </div>
                     </section>
 
-                    {/* Specifications */}
+                    {/* Specifications Cards */}
                     <section id="specifications" className="detail-section">
                         <div className="section-header-small">
                             <span className="tag">Quality & Design</span>
                             <h2>Technical Specifications</h2>
+                            <div className="heading-divider"></div>
                         </div>
-                        <div className="specs-accordion">
+                        <div className="specs-grid-cards">
                             {project.specs.map((spec, i) => (
-                                <div key={i} className="spec-row">
-                                    <div className="spec-icon">
-                                        <HardHat size={18} />
-                                    </div>
-                                    <div className="spec-content">
+                                <div key={i} className="spec-card-elevated" data-aos="fade-up" data-aos-delay={i * 80}>
+                                    <div className="spec-card-header">
+                                        <div className="spec-card-icon">
+                                            <HardHat size={20} />
+                                        </div>
                                         <h4>{spec.category}</h4>
+                                    </div>
+                                    <div className="spec-card-body">
                                         <p>{spec.detail}</p>
                                     </div>
                                 </div>
@@ -258,22 +271,26 @@ const ProjectDetail = () => {
                         </div>
                     </section>
 
-                    {/* Location Advantages */}
+                    {/* Location Advantages Timeline */}
                     <section id="location" className="detail-section">
                         <div className="section-header-small">
-                            <span className="tag">Connectivty</span>
-                            <h2>Location Advantages</h2>
+                            <span className="tag">Connectivity</span>
+                            <h2>Strategic Location</h2>
+                            <div className="heading-divider"></div>
                         </div>
-                        <div className="location-grid-modern">
+                        <div className="location-timeline">
                             {project.locationAdvantages.map((item, i) => (
-                                <div key={i} className="location-box">
-                                    <div className="loc-info">
-                                        <Compass size={18} />
-                                        <h4>{item.place}</h4>
-                                    </div>
-                                    <div className="loc-time">
-                                        <Clock size={16} />
-                                        <span>{item.time}</span>
+                                <div key={i} className="timeline-item" data-aos="fade-left" data-aos-delay={i * 100}>
+                                    <div className="timeline-marker"></div>
+                                    <div className="timeline-content-box">
+                                        <div className="timeline-place">
+                                            <Compass size={20} className="place-icon" />
+                                            <h4>{item.place}</h4>
+                                        </div>
+                                        <div className="timeline-duration">
+                                            <Clock size={16} />
+                                            <span>{item.time} Drive</span>
+                                        </div>
                                     </div>
                                 </div>
                             ))}

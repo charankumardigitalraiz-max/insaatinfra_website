@@ -2,10 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Phone, Mail, ChevronRight, Home, Building, Users, MessageCircle, Image, FileText, Briefcase } from 'lucide-react';
 import '../styles/navbar.css';
+import EnquireModal from './EnquireModal';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
+    const [isModalOpen, setIsModalOpen] = useState(false);
     const location = useLocation();
 
     useEffect(() => {
@@ -72,10 +74,10 @@ const Navbar = () => {
 
                         {/* Header Actions */}
                         <div className="nav-actions">
-                            <a href="tel:+919154491915" className="btn-enquire">
+                            <button onClick={() => setIsModalOpen(true)} className="btn-enquire" style={{ cursor: 'pointer' }}>
                                 <Phone size={16} />
                                 <span>Enquire Now</span>
-                            </a>
+                            </button>
 
                             <button
                                 className="mobile-toggle"
@@ -145,12 +147,18 @@ const Navbar = () => {
                             <span>info@insaatinfra.in</span>
                         </a>
                     </div>
-                    <a href="tel:+919154491915" className="btn btn-primary mobile-cta">
+                    <button onClick={() => { setIsModalOpen(true); setIsOpen(false); }} className="btn btn-primary mobile-cta" style={{ width: '100%', cursor: 'pointer' }}>
                         <Phone size={16} />
-                        <span>Call Us Now</span>
-                    </a>
+                        <span>Enquire Now</span>
+                    </button>
                 </div>
             </div>
+
+            {/* Enquire Modal Component */}
+            <EnquireModal
+                isOpen={isModalOpen}
+                onClose={() => setIsModalOpen(false)}
+            />
         </>
     );
 };

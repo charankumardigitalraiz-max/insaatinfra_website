@@ -9,56 +9,44 @@
 /* ── Hero Section ───────────────────────────── */
 .contact-hero {
     position: relative;
-    background: var(--grad-primary);
+    padding: 0;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    /* Centered on desktop */
+    background: var(--primary);
     overflow: hidden;
     color: white;
-    padding: 100px 0 20px;
 }
 
-.hero-bg-pattern {
+@media (max-width: 992px) {
+    .contact-hero {
+        min-height: auto;
+        flex-direction: column;
+        justify-content: flex-end;
+        /* Stacking for mobile */
+    }
+}
+
+.contact-hero .hero-bg {
     position: absolute;
     inset: 0;
-    background-image:
-        radial-gradient(circle at 30% 70%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 70% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+    z-index: 1;
 }
 
-.hero-shapes {
+.contact-hero .hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contact-hero .hero-overlay {
     position: absolute;
     inset: 0;
-    overflow: hidden;
-}
-
-.shape {
-    position: absolute;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.1);
-    animation: shapeFloat 8s ease-in-out infinite;
-}
-
-.shape-1 {
-    width: 150px;
-    height: 150px;
-    top: 20%;
-    left: 10%;
-    animation-delay: 0s;
-}
-
-.shape-2 {
-    width: 100px;
-    height: 100px;
-    top: 60%;
-    right: 15%;
-    animation-delay: 3s;
-}
-
-.shape-3 {
-    width: 80px;
-    height: 80px;
-    bottom: 30%;
-    left: 25%;
-    animation-delay: 6s;
+    background: linear-gradient(to bottom,
+            rgba(10, 37, 64, 0.8),
+            rgba(10, 37, 64, 0.9));
+    z-index: 2;
 }
 
 @keyframes shapeFloat {
@@ -77,14 +65,19 @@
 
 .hero-content {
     position: relative;
-    z-index: 2;
+    z-index: 3;
     text-align: center;
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
-    padding: 80px 20px 60px;
-    /* Consistent top gap */
+    padding: 160px 20px 80px;
     display: flex;
-    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .hero-content {
+        padding: 140px 20px 60px;
+    }
 }
 
 .hero-inner {
@@ -149,6 +142,12 @@
     gap: 0;
 }
 
+@media (max-width: 480px) {
+    .hero-stats-inner {
+        grid-template-columns: 1fr;
+    }
+}
+
 @media (min-width: 768px) {
     .hero-stats-inner {
         grid-template-columns: repeat(4, 1fr);
@@ -201,7 +200,7 @@
 
 /* ── Contact Cards Section ──────────────────── */
 .contact-cards-section {
-    padding: 80px 0;
+    padding: 60px 0;
     background: var(--bg-light);
 }
 
@@ -209,11 +208,15 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
+    align-items: stretch;
+    /* Ensure all cards stretch to equal height */
 }
 
 .contact-card-link {
     text-decoration: none;
     transition: var(--transition);
+    display: flex;
+    flex-direction: column;
 }
 
 .contact-card-link:hover {
@@ -223,111 +226,144 @@
 .contact-card {
     background: white;
     border-radius: 20px;
-    padding: 40px 30px;
+    padding: 40px 20px;
     position: relative;
     overflow: hidden;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
     border: 1px solid rgba(0, 0, 0, 0.05);
     transition: var(--transition);
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 24px;
+    text-align: center;
+    gap: 20px;
+    height: 100%;
+    z-index: 1;
 }
 
 .contact-card-link:hover .contact-card {
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+    transform: translateY(-5px);
 }
 
 .card-icon-wrapper {
     position: relative;
-    flex-shrink: 0;
+    display: inline-flex;
+    margin-bottom: 5px;
 }
 
 .card-icon-bg {
     position: absolute;
-    inset: -12px;
-    border-radius: 20px;
-    opacity: 0.1;
-    transition: var(--transition);
-}
-
-.contact-card-link.sapphire .card-icon-bg {
-    background: var(--sapphire);
-}
-
-.contact-card-link.emerald .card-icon-bg {
-    background: var(--emerald);
-}
-
-.contact-card-link.ruby .card-icon-bg {
-    background: var(--ruby);
+    inset: -10px;
+    border-radius: 50%;
+    background: var(--grad-primary);
+    opacity: 0;
+    transition: all 0.4s ease;
+    filter: blur(10px);
+    z-index: -1;
 }
 
 .contact-card-link:hover .card-icon-bg {
-    opacity: 0.2;
-    transform: scale(1.1);
+    opacity: 0.15;
+    transform: scale(1.2);
 }
 
 .contact-card .card-icon-wrapper svg {
-    width: 56px;
-    height: 56px;
-    background: var(--grad-primary);
-    border-radius: 16px;
+    width: 72px;
+    height: 72px;
+    background: var(--bg-light);
+    border: 1px solid rgba(0, 33, 71, 0.08);
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: var(--sapphire);
     position: relative;
     z-index: 2;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-    transition: var(--transition);
+    padding: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s ease;
 }
 
 .contact-card-link:hover .card-icon-wrapper svg {
     transform: scale(1.1);
-    background: var(--grad-secondary);
+    background: var(--grad-primary);
+    color: white;
+    border-color: transparent;
+    box-shadow: 0 15px 35px rgba(0, 33, 71, 0.2);
 }
 
 .card-content {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .card-title {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-weight: 800;
     color: var(--primary-dark);
-    margin-bottom: 8px;
+    margin-bottom: 12px;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+.card-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 3px;
+    background: var(--secondary);
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+.contact-card-link:hover .card-title::after {
+    width: 50px;
 }
 
 .card-main {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     font-weight: 700;
-    color: var(--sapphire);
-    margin-bottom: 4px;
+    color: var(--primary);
+    margin-bottom: 8px;
 }
 
 .card-sub {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     color: var(--text-light);
-    line-height: 1.4;
+    line-height: 1.5;
 }
 
 .card-arrow {
-    opacity: 0;
-    transform: translateX(-10px);
-    transition: var(--transition);
+    margin-top: auto;
+    width: 40px;
+    height: 40px;
+    background: var(--bg-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: var(--sapphire);
+    transition: all 0.3s ease;
+    opacity: 0.6;
 }
 
 .contact-card-link:hover .card-arrow {
     opacity: 1;
-    transform: translateX(0);
+    background: var(--sapphire);
+    color: white;
+    transform: translateY(-5px);
 }
 
 /* ── Main Contact Section ───────────────────── */
 .contact-main-section {
-    padding: 100px 0;
-    background: white;
+    padding: 80px 0;
+    background: var(--bg-white);
 }
 
 .contact-grid {
@@ -444,14 +480,14 @@
     justify-content: center;
     background: var(--bg-light);
     border: 2px solid var(--border);
-    color: var(--sapphire);
+    color: var(--primary);
     transition: var(--transition);
     text-decoration: none;
 }
 
 .social-link:hover {
-    background: var(--sapphire);
-    border-color: var(--sapphire);
+    background: var(--primary);
+    border-color: var(--primary);
     color: white;
     transform: translateY(-4px) scale(1.1);
     box-shadow: 0 8px 25px rgba(0, 123, 255, 0.3);
@@ -661,7 +697,8 @@
     }
 
     .hero-title {
-        font-size: 2.2rem;
+        font-size: 2rem;
+        line-height: 1.2;
     }
 
     .hero-desc {
@@ -684,8 +721,16 @@
     .contact-card {
         padding: 30px 20px;
         flex-direction: column;
+        align-items: center;
+        /* Center items on mobile */
         text-align: center;
-        gap: 20px;
+        gap: 15px;
+        /* Reduce gap on mobile */
+    }
+
+    .card-icon-wrapper {
+        margin-bottom: 5px;
+        /* Add margin to bottom since they are stacked */
     }
 
     .contact-grid {
