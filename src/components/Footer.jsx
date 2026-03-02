@@ -21,7 +21,6 @@ const Footer = () => {
     const services = [
         'Premium Apartments',
         'Gated Community Layouts',
-        'Luxury Villas',
         'Commercial Complexes',
         'Interior Designing',
     ];

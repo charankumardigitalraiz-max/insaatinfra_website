@@ -193,7 +193,7 @@
 }
 
 .modal-header {
-    margin-bottom: 25px;
+    margin-bottom: 15px;
 }
 
 .modal-header h2 {
@@ -217,7 +217,7 @@
 .modal-form {
     display: flex;
     flex-direction: column;
-    gap: 7px;
+    gap: 6px;
 }
 
 .form-group {
@@ -243,7 +243,7 @@
     width: 100%;
     background: #f8fafc;
     border: 1.5px solid #e2e8f0;
-    padding: 12px 20px 12px 50px;
+    padding: 10px 20px 10px 50px;
     border-radius: 12px;
     font-size: 0.95rem;
     color: var(--text-dark);

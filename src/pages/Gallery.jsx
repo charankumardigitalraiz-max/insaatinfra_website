@@ -11,42 +11,42 @@ const Gallery = () => {
             id: 1,
             category: 'apartments',
             title: 'Insaat Bliss - Exterior',
-            image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80&w=1000',
+            image: '/images/apartments/glow.jpg',
             desc: 'Modern facade design of Insaat Bliss Apartments.'
         },
         {
             id: 2,
             category: 'plots',
             title: 'Insaat Meadows - Layout',
-            image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=1000',
+            image: '/images/layouts/meadows.jpg',
             desc: 'Spacious open plots at Bachepally Village.'
         },
         {
             id: 3,
             category: 'construction',
-            title: 'Construction in Progress',
-            image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=80&w=1000',
+            title: 'Insaat Habitat - Site',
+            image: '/images/layouts/habitat.png',
             desc: 'Site completion and quality checks.'
         },
         {
             id: 4,
             category: 'interiors',
-            title: 'Luxury Living Room',
-            image: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=1000',
-            desc: 'High-end interior design at Insaat Bliss.'
+            title: 'Modern Interiors',
+            image: '/images/projects/malkapur-site-plan_Scene-6.jpg',
+            desc: 'Detailed planning and interior layout concepts.'
         },
         {
             id: 5,
             category: 'apartments',
-            title: 'Insaat Bliss - Night View',
-            image: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&q=80&w=1000',
-            desc: 'Elegant lighting and landscape architecture.'
+            title: 'Insaat Sky View',
+            image: '/images/apartments/skyview.jpg',
+            desc: 'Elegant architecture and premium living spaces.'
         },
         {
             id: 6,
             category: 'plots',
-            title: 'Meadows Greenery',
-            image: 'https://images.unsplash.com/photo-1500673922987-e212871fec22?auto=format&fit=crop&q=80&w=1000',
+            title: 'Eco Valley Plots',
+            image: '/images/layouts/ecovalley.jpg',
             desc: 'Eco-friendly sustainable plot development.'
         }
     ];
@@ -69,7 +69,7 @@ const Gallery = () => {
             <section className="gallery-hero">
                 <div className="hero-bg">
                     <img
-                        src="https://images.unsplash.com/photo-1493397862567-47fee4ffebb6?auto=format&fit=crop&q=80&w=2000"
+                        src="/images/projects/types-of-real-estate-overview-scaled.jpg"
                         alt="Gallery Portfolio"
                     />
                 </div>

@@ -109,34 +109,6 @@ const Projects = () => {
             status: 'Completed',
             area: 'Residential Plots'
         },
-        // Villas
-        {
-            id: 'habitat-triplex',
-            title: 'Habitat Triplex',
-            location: 'Malkapur, Sangareddy',
-            type: 'Villa',
-            image: '/images/villas/habitat.jpg',
-            status: 'Ready to Move',
-            area: 'Luxury Triplex'
-        },
-        {
-            id: 'serene-duplex',
-            title: 'Serene Duplex',
-            location: 'Kohir, Sangareddy',
-            type: 'Villa',
-            image: '/images/villas/serene.jpg',
-            status: 'Ready to Move',
-            area: 'Premium Duplex'
-        },
-        {
-            id: 'lakeview-villas',
-            title: 'Lakeview Villas',
-            location: 'Malkapur, Sangareddy',
-            type: 'Villa',
-            image: '/images/villas/lakeview.jpg',
-            status: 'Ongoing',
-            area: 'Scenic Living'
-        },
         // Commercial
         {
             id: 'motimahal',
@@ -171,7 +143,6 @@ const Projects = () => {
     const filters = [
         { id: 'all', label: 'All Projects', count: projects.length },
         { id: 'apartment', label: 'Apartments', count: projects.filter(p => p.type === 'Apartment').length },
-        { id: 'villa', label: 'Villas', count: projects.filter(p => p.type === 'Villa').length },
         { id: 'land', label: 'Land Layouts', count: projects.filter(p => p.type === 'Land Layout').length },
         { id: 'commercial', label: 'Commercial', count: projects.filter(p => p.type === 'Commercial').length },
         { id: 'interior', label: 'Interiors', count: projects.filter(p => p.type === 'Interior').length }
@@ -213,7 +184,6 @@ const Projects = () => {
     const filtered = projects.filter(project => {
         const matchesFilter = activeFilter === 'all' ||
             (activeFilter === 'apartment' && project.type === 'Apartment') ||
-            (activeFilter === 'villa' && project.type === 'Villa') ||
             (activeFilter === 'land' && project.type === 'Land Layout') ||
             (activeFilter === 'commercial' && project.type === 'Commercial') ||
             (activeFilter === 'interior' && project.type === 'Interior');

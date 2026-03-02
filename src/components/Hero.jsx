@@ -10,8 +10,8 @@ const Hero = () => {
             {/* Background */}
             <div className="hero-bg">
                 <img
-                    src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=2000"
-                    alt="Cinematic Real Estate"
+                    src="/images/projects/types-of-real-estate-overview-scaled.jpg"
+                    alt="Premium Apartments & Plots"
                 />
             </div>
             <div className="hero-overlay" />
@@ -31,7 +31,7 @@ const Hero = () => {
                         </h1>
 
                         <p className="hero-subtitle">
-                            Discover premium apartments, luxury villas, and high-growth open plots
+                            Discover premium apartments and high-growth open plots
                             designed for excellence and built with trust.
                         </p>
 
@@ -49,7 +49,6 @@ const Hero = () => {
                                 <label><Building2 size={10} /> Property Type</label>
                                 <select>
                                     <option>Premium Apartments</option>
-                                    <option>Luxury Villas</option>
                                     <option>Open Plots</option>
                                 </select>
                             </div>

@@ -68,7 +68,7 @@ const testimonials = [
     {
         name: 'Arun Kumar',
         location: 'Sangareddy',
-        text: 'Beautiful design, top-quality materials, and exceptional customer service. Our villa feels like a dream come true.',
+        text: 'Beautiful design, top-quality materials, and exceptional customer service. Our home feels like a dream come true.',
         rating: 5,
     },
 ];

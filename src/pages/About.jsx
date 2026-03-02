@@ -48,8 +48,8 @@ const About = () => {
             <section className="about-hero">
                 <div className="hero-bg">
                     <img
-                        src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2000"
-                        alt="Corporate Excellence"
+                        src="/images/projects/malkapur-site-plan_Scene-6.jpg"
+                        alt="Premium Residential Development"
                     />
                 </div>
                 <div className="hero-overlay" />
