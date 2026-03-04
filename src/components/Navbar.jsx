@@ -36,7 +36,7 @@ const Navbar = () => {
         { name: 'Projects', path: '/projects', icon: Building },
         { name: 'Gallery', path: '/gallery', icon: Image },
         { name: 'News', path: '/news', icon: FileText },
-        { name: 'Careers', path: '/careers', icon: Briefcase },
+        // { name: 'Careers', path: '/careers', icon: Briefcase },
         { name: 'Contact Us', path: '/contact', icon: MessageCircle },
     ];
 

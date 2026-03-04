@@ -139,11 +139,11 @@ const Home = () => {
                                 <Link to="/about" className="btn btn-primary">
                                     Company Profile <ArrowRight size={16} />
                                 </Link>
-                                <a href="tel:+919154491915" className="about-phone-btn hover-lift">
+                                <a href="tel:+919700358140" className="about-phone-btn hover-lift">
                                     <div className="about-phone-icon"><Phone size={18} /></div>
                                     <div>
                                         <div className="about-phone-label">Direct Consultation</div>
-                                        <div className="about-phone-num">+91 9322 22 2821</div>
+                                        <div className="about-phone-num">+91 9700 358 140</div>
                                     </div>
                                 </a>
                             </div>
@@ -212,7 +212,7 @@ const Home = () => {
             </section>
 
             {/* ── Banner 2: Strategic Investment ──────────── */}
-            <section className="wide-banner" style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2000")' }}>
+            <section className="wide-banner" style={{ backgroundImage: 'url("/images/apartments/middle-banner3.jpg")' }}>
                 <div className="wide-banner-overlay" style={{ background: 'linear-gradient(90deg, rgba(10, 37, 64, 0.95) 0%, rgba(10, 37, 64, 0.2) 100%)' }} />
                 <div className="container">
                     <div className="wide-banner-content" data-aos="fade-left" style={{ marginLeft: 'auto', textAlign: 'right' }}>
@@ -330,7 +330,7 @@ const Home = () => {
                             <Link to="/contact" className="btn btn-secondary">
                                 Book A Free Site Visit <ArrowRight size={16} />
                             </Link>
-                            <a href="tel:+919154491915" className="btn btn-outline-white">
+                            <a href="tel:+919700358140" className="btn btn-outline-white">
                                 <Phone size={16} /> Call Us Now
                             </a>
                         </div>

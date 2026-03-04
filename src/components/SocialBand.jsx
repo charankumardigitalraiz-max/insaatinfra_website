@@ -23,7 +23,7 @@ const SocialBand = () => {
 
             {/* Right WhatsApp Floating Action Button */}
             <a
-                href="https://wa.me/919322222821"
+                href="https://wa.me/919550341818"
                 className="floating-whatsapp-btn"
                 target="_blank"
                 rel="noopener noreferrer"

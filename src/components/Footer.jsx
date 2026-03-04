@@ -103,8 +103,8 @@ const Footer = () => {
                                         <MapPin size={16} />
                                     </div>
                                     <div className="footer-contact-info">
-                                        <span>Head Office</span>
-                                        <p>11-12/2/A/21, Opp Hotel Wood Bridge, Near RR District Collectorate, Lakdikapul, Hyderabad - 500004.</p>
+                                        <span>Corporate Office</span>
+                                        <p>37B, Jubilee Hills, Filmnagar, Hyderabad, Telangana.</p>
                                     </div>
                                 </div>
                                 <div className="footer-contact-item">
@@ -112,8 +112,8 @@ const Footer = () => {
                                         <MapPin size={16} />
                                     </div>
                                     <div className="footer-contact-info">
-                                        <span>Regional Office</span>
-                                        <p>3-4-8/1, Near New Bus Stand, Sangareddy, Telangana - 502001.</p>
+                                        <span>Registered Office</span>
+                                        <p> Insaat Habitat, Malkapur, Sangareddy, Telangana.</p>
                                     </div>
                                 </div>
                                 <div className="footer-contact-item">
@@ -122,8 +122,8 @@ const Footer = () => {
                                     </div>
                                     <div className="footer-contact-info">
                                         <span>Phone</span>
-                                        <a href="tel:+919322222821">+91 9322 22 2821</a>
-                                        <a href="tel:+919702318142">+91 97023 18142</a>
+                                        <a href="tel:+919550341818">+91 9550 341 818</a>
+                                        <a href="tel:+919700358140">+91 9700 35 8140</a>
                                     </div>
                                 </div>
                                 <div className="footer-contact-item">

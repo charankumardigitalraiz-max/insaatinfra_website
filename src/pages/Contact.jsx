@@ -31,9 +31,9 @@ const Contact = () => {
         {
             icon: <Phone size={32} />,
             title: 'Call Us',
-            content: '+91 9322 22 2821',
+            content: '+91 9550 341 818',
             subtext: 'Mon - Sat: 9AM - 7PM',
-            link: 'tel:+919322222821',
+            link: 'tel:+919550341818',
             color: 'primary'
         },
         {
@@ -46,9 +46,9 @@ const Contact = () => {
         },
         {
             icon: <MapPin size={32} />,
-            title: 'Head Office',
-            content: 'Opp Hotel Wood Bridge',
-            subtext: 'Lakdikapul, Hyderabad - 500004',
+            title: 'Corporate Office',
+            content: '37B, Jubilee Hills',
+            subtext: 'Filmnagar, Hyderabad, Telangana',
             link: 'https://goo.gl/maps/lakdikapul-hyderabad',
             color: 'primary'
         }
@@ -56,8 +56,8 @@ const Contact = () => {
 
     const officeHours = [
         { day: 'Monday - Friday', hours: '9:00 AM - 7:00 PM' },
-        { day: 'Saturday', hours: '9:00 AM - 5:00 PM' },
-        { day: 'Sunday', hours: 'Closed' }
+        // { day: 'Saturday', hours: '9:00 AM - 5:00 PM' },
+        // { day: 'Sunday', hours: 'Closed' }
     ];
 
     return (
