@@ -7,16 +7,16 @@ const SocialBand = () => {
         <>
             {/* Left Vertical Social Media Band */}
             <div className="vertical-social-band">
-                <a href="#" className="social-band-icon facebook" aria-label="Facebook">
+                <a target='_blank' href="https://www.facebook.com/Insaatinfraprojectslimited/" className="social-band-icon facebook" aria-label="Facebook">
                     <Facebook size={20} />
                 </a>
-                <a href="#" className="social-band-icon instagram" aria-label="Instagram">
+                <a target='_blank' href="https://www.instagram.com/insaatinfra/" className="social-band-icon instagram" aria-label="Instagram">
                     <Instagram size={20} />
                 </a>
-                <a href="#" className="social-band-icon linkedin" aria-label="LinkedIn">
+                {/* <a href="#" className="social-band-icon linkedin" aria-label="LinkedIn">
                     <Linkedin size={20} />
-                </a>
-                <a href="#" className="social-band-icon youtube" aria-label="YouTube">
+                </a> */}
+                <a target='_blank' href="https://www.youtube.com/@INSAATINFRA" className="social-band-icon youtube" aria-label="YouTube">
                     <Youtube size={20} />
                 </a>
             </div>

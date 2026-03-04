@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Facebook, Instagram, Linkedin, MapPin, Phone, Mail, Send, Home, Building, Users, MessageCircle, ArrowRight, CheckCircle, Image, FileText, Briefcase, Handshake } from 'lucide-react';
+import { Facebook, Instagram, Youtube, Linkedin, MapPin, Phone, Mail, Send, Home, Building, Users, MessageCircle, ArrowRight, CheckCircle, Image, FileText, Briefcase } from 'lucide-react';
 import '../styles/footer.css';
 
 const Footer = () => {
@@ -50,14 +50,14 @@ const Footer = () => {
                                 innovative design, and unwavering commitment to excellence.
                             </p>
                             <div className="footer-socials">
-                                <a href="#" className="footer-social-btn" title="Facebook" aria-label="Facebook">
+                                <a target='_blank' href="https://www.facebook.com/Insaatinfraprojectslimited/" className="footer-social-btn" title="Facebook" aria-label="Facebook">
                                     <Facebook size={18} />
                                 </a>
-                                <a href="#" className="footer-social-btn" title="Instagram" aria-label="Instagram">
+                                <a target='_blank' href="https://www.instagram.com/insaatinfra/" className="footer-social-btn" title="Instagram" aria-label="Instagram">
                                     <Instagram size={18} />
                                 </a>
-                                <a href="#" className="footer-social-btn" title="LinkedIn" aria-label="LinkedIn">
-                                    <Linkedin size={18} />
+                                <a target='_blank' href="https://www.youtube.com/@INSAATINFRA" className="footer-social-btn" title="LinkedIn" aria-label="LinkedIn">
+                                    <Youtube size={18} />
                                 </a>
                             </div>
                         </div>
