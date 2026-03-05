@@ -55,7 +55,7 @@ const Contact = () => {
     ];
 
     const officeHours = [
-        { day: 'Monday - Friday', hours: '9:00 AM - 7:00 PM' },
+        { day: 'Monday - Sunday', hours: '9:00 AM - 7:00 PM' },
         // { day: 'Saturday', hours: '9:00 AM - 5:00 PM' },
         // { day: 'Sunday', hours: 'Closed' }
     ];
@@ -290,6 +290,8 @@ const Contact = () => {
                 </div>
             </section>
 
+
+{/* <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3177.360228648842!2d78.4138777!3d17.4173528!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb97510ff663eb%3A0x7d3bca3bd085607c!2sINSAAT%20INFRA%20CORPORATE%20OFFICE!5e1!3m2!1sen!2sin!4v1772692522426!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> */}
             {/* Map Section */}
             <section className="map-section">
                 <div className="container">
@@ -300,7 +302,7 @@ const Contact = () => {
                     <div className="map-container" data-aos="fade-up">
                         <iframe
                             title="Location Map"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.447548!2d78.397123!3d17.411624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb96cea0000001%3A0x0!2zMTfCsDI0JzQxLjkiTiA3OMKwMjMnNDkuNiJF!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3177.360228648842!2d78.4138777!3d17.4173528!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb97510ff663eb%3A0x7d3bca3bd085607c!2sINSAAT%20INFRA%20CORPORATE%20OFFICE!5e1!3m2!1sen!2sin!4v1772692522426!5m2!1sen!2sin"
                             allowFullScreen=""
                             loading="lazy"
                             referrerPolicy="no-referrer-when-downgrade"

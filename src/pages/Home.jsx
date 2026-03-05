@@ -139,11 +139,11 @@ const Home = () => {
                                 <Link to="/about" className="btn btn-primary">
                                     Company Profile <ArrowRight size={16} />
                                 </Link>
-                                <a href="tel:+919700358140" className="about-phone-btn hover-lift">
+                                <a href="tel:+917416630909" className="about-phone-btn hover-lift">
                                     <div className="about-phone-icon"><Phone size={18} /></div>
                                     <div>
                                         <div className="about-phone-label">Direct Consultation</div>
-                                        <div className="about-phone-num">+91 9700 358 140</div>
+                                        <div className="about-phone-num">+91 7416 630 909</div>
                                     </div>
                                 </a>
                             </div>
@@ -330,7 +330,7 @@ const Home = () => {
                             <Link to="/contact" className="btn btn-secondary">
                                 Book A Free Site Visit <ArrowRight size={16} />
                             </Link>
-                            <a href="tel:+919700358140" className="btn btn-outline-white">
+                            <a href="tel:+917416630909" className="btn btn-outline-white">
                                 <Phone size={16} /> Call Us Now
                             </a>
                         </div>
